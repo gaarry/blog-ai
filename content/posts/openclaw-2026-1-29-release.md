@@ -1,6 +1,6 @@
 ---
 title: "OpenClaw 2026.1.29 版本发布：品牌重塑与多项功能升级"
-date: 2026-01-31
+date: 2026-01-31T20:12:00+08:00
 draft: false
 description: "OpenClaw 发布最新稳定版本，完成品牌重命名并带来大量新功能"
 coverImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80"

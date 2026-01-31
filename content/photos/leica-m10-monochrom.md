@@ -3,7 +3,7 @@ title: "Leica M10 Monochrom"
 date: 2022-07-16
 draft: false
 description: "The black and white beauty."
-coverImage: "https://picsum.photos/800/600?grayscale&random=10"
+coverImage: "https://images.unsplash.com/photo-1517535846871-2c8eb354a41c?w=800&q=80"
 exif:
   camera: "Leica M10 Monochrom"
   lens: "Summicron-M 1:2/50"

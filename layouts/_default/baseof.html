@@ -45,7 +45,16 @@
   
   {{ partial "footer.html" . }}
   
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="Enlarged photo">
+    </div>
+  </div>
+  
   <!-- JS -->
   <script src="/js/main.js"></script>
+  <script src="/js/lightbox.js"></script>
 </body>
 </html>

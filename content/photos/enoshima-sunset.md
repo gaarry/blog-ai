@@ -3,7 +3,7 @@ title: "Enoshima Sunset"
 date: 2022-08-14
 draft: false
 description: "Enoshima is always crowded on the weekends, but at least the sunsets are pretty."
-coverImage: "https://images.unsplash.com/photo-1507550738608-a6913e6649e4?w=800&q=80"
+coverImage: "/images/enoshima-sunset.jpg"
 exif:
   camera: "Leica M10-R"
   lens: "Summilux-M 1:2/35 ASPH."

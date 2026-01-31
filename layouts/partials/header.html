@@ -2,9 +2,75 @@
   <nav class="site-nav">
     <a href="/" class="site-title">{{ .Site.Title }}</a>
     <ul class="nav-menu">
-      {{ range .Site.Menus.main }}
-      <li><a href="{{ .URL }}" class="{{ if eq .URL "/" }}active{{ end }}">{{ .Name }}</a></li>
-      {{ end }}
+      <li><a href="/">Home</a></li>
+      <li><a href="/archive/">Archive</a></li>
+      <li><a href="/photos/">Photos</a></li>
+      <li><a href="/about/">About</a></li>
     </ul>
   </nav>
 </header>
+
+<style>
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: rgba(255,255,255,0.95);
+  border-bottom: 1px solid #e0e0e0;
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+.site-nav {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  color: #666;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+  color: #1a1a1a;
+}
+
+@media (prefers-color-scheme: dark) {
+  .site-header {
+    background: rgba(30,30,30,0.95);
+    border-bottom-color: #333;
+  }
+  
+  .site-title, .nav-menu a {
+    color: #e0e0e0;
+  }
+  
+  .nav-menu a:hover {
+    color: #fff;
+  }
+}
+</style>

@@ -1,6 +1,6 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://ai-blog.gary-yao.com/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'My Blog'
 
 [params]
   description = 'A personal blog about technology, photography, and life.'

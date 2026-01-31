@@ -368,6 +368,72 @@ a:hover {
   font-size: 0.95rem;
 }
 
+/* Photos Grid */
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.photos-grid .photo-item {
+  margin-bottom: 0;
+}
+
+.photos-grid .photo-item a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.photos-grid .photo-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.photos-grid .photo-placeholder {
+  width: 100%;
+  height: 200px;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.photos-grid .photo-item h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #e0e0e0;
+}
+
+.photos-grid .photo-item time {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.photos-grid .photo-item a:hover img {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .photos-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  
+  .photos-grid .photo-item img,
+  .photos-grid .photo-placeholder {
+    height: 150px;
+  }
+}
+
 .photos-list .photo-item a:hover {
   text-decoration: underline;
 }

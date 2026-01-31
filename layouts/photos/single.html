@@ -19,6 +19,12 @@
       {{ end }}
     </header>
     
+    {{ if .Params.coverImage }}
+    <div class="post-cover">
+      <img src="{{ .Params.coverImage }}" alt="{{ .Title }}" loading="lazy">
+    </div>
+    {{ end }}
+    
     <div class="post-body">
       {{ .Content }}
     </div>

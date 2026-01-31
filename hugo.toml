@@ -1,3 +1,44 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
+
+[params]
+  description = 'A personal blog about technology, photography, and life.'
+  author = 'Your Name'
+  email = 'your@email.com'
+  twitter = ''
+  github = ''
+
+[[menu.main]]
+  name = 'Home'
+  url = '/'
+  weight = 1
+
+[[menu.main]]
+  name = 'Archive'
+  url = '/archive/'
+  weight = 2
+
+[[menu.main]]
+  name = 'Photos'
+  url = '/photos/'
+  weight = 3
+
+[[menu.main]]
+  name = 'About'
+  url = '/about/'
+  weight = 4
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+
+[pagination]
+  pagerSize = 10
+
+[permalinks]
+  posts = '/posts/:slug/'
+  photos = '/photos/:slug/'
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

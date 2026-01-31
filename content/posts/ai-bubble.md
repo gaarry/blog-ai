@@ -3,11 +3,11 @@ title: "The AI Bubble: Hype vs. Reality"
 date: 2026-01-31
 draft: false
 description: "Examining the current AI boom through a critical lens - what's real, what's exaggerated, and what comes next."
-coverImage: "https://images.unsplash.com/photo-1611974765270-ca1258634369?w=800&q=80"
+coverImage: "/images/ginza.jpg"
 tags: ["AI", "technology", "analysis", "business"]
 ---
 
-![AI Market](https://images.unsplash.com/photo-1611974765270-ca1258634369?w=800&q=80)
+![AI Market](/images/ginza.jpg)
 
 Every technology wave brings both genuine innovation and speculative excess. The current AI boom is no exception. Let's take a critical look at where we stand.
 

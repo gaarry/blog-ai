@@ -3,11 +3,11 @@ title: "AI in Healthcare: Detecting Disease Earlier"
 date: 2026-01-31
 draft: false
 description: "How artificial intelligence is revolutionizing medical diagnosis, from cancer detection to personalized treatment."
-coverImage: "/images/arise-coffee.jpg"
+coverImage: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80"
 tags: ["AI", "healthcare", "medical", "technology"]
 ---
 
-![AI in Healthcare](/images/arise-coffee.jpg)
+![AI in Healthcare](https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80)
 
 Artificial intelligence is making waves in healthcare, and recent studies show it's not just hype - AI is genuinely saving lives.
 

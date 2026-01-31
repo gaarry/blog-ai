@@ -3,7 +3,7 @@ title: "50 Shades of Shinjuku Gyoen"
 date: 2020-12-15
 draft: false
 description: "Shinjuku Gyoen is one of Tokyo's largest and most popular parks."
-coverImage: "/images/01-shinjuku-gyoen.jpg"
+coverImage: "https://images.unsplash.com/photo-1472457897821-70d3819a0e24?w=800&q=80"
 exif:
   camera: "Leica Q2"
   focalLength: "28mm"

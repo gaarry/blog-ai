@@ -3,11 +3,11 @@ title: "AI Agents: The Future of Autonomous Systems"
 date: 2026-01-31
 draft: false
 description: "Exploring the rise of autonomous AI agents and their potential to transform how we work."
-coverImage: "/images/enoshima-sunset.jpg"
+coverImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80"
 tags: ["AI", "artificial intelligence", "automation", "technology"]
 ---
 
-![AI Agents](/images/enoshima-sunset.jpg)
+![AI Agents](https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80)
 
 The landscape of artificial intelligence is shifting rapidly from passive tools to proactive agents. These autonomous systems can plan, execute, and adapt without constant human intervention.
 

@@ -3,7 +3,7 @@ title: "teamLab Planets"
 date: 2018-12-08
 draft: false
 description: "A photography collection from BrianLi.com"
-coverImage: "https://images.unsplash.com/photo-1515063387719-a87c3f878066?w=800&q=80"
+coverImage: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=800&q=80"
 exif:
   camera: "Leica Q2"
   focalLength: "28mm"

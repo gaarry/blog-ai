@@ -179,6 +179,34 @@ a:hover {
   margin-bottom: 1.25rem;
 }
 
+/* Images in posts */
+.post-body img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+  border-radius: 4px;
+}
+
+.post-body figure {
+  margin: 1.5rem 0;
+}
+
+.post-body figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.post-body figure figcaption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
 .post-body h1,
 .post-body h2,
 .post-body h3 {

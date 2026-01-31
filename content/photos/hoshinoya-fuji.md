@@ -3,7 +3,7 @@ title: "Hoshinoya Fuji"
 date: 2020-11-11
 draft: false
 description: "A peaceful retreat near Mount Fuji."
-coverImage: "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=800&q=80"
+coverImage: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&q=80"
 exif:
   camera: "Leica M10"
   lens: "Summilux-M 1:2/35 ASPH."

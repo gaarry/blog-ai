@@ -3,7 +3,7 @@ title: "Mount Fuji in the Distance"
 date: 2020-01-15
 draft: false
 description: "A photography collection from BrianLi.com"
-coverImage: "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=800&q=80"
+coverImage: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80"
 exif:
   camera: "Leica Q2"
   focalLength: "28mm"

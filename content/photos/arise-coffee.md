@@ -3,7 +3,7 @@ title: "Arise Coffee Roasters"
 date: 2020-11-26
 draft: false
 description: "Exploring Kiyosumi Shirikawa and finding excellent coffee."
-coverImage: "https://images.unsplash.com/photo-1509395062183-67c5ad14f9d9?w=800&q=80"
+coverImage: "https://picsum.photos/800/600?random=20"
 exif:
   camera: "Leica Q2"
   focalLength: "28mm"

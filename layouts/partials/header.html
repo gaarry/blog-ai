@@ -1,76 +1,236 @@
 <header class="site-header">
   <nav class="site-nav">
     <a href="/" class="site-title">{{ .Site.Title }}</a>
-    <ul class="nav-menu">
+    <button class="menu-button" id="menu-toggle" aria-label="Toggle menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </nav>
+  <div class="menu-overlay" id="menu-overlay"></div>
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="menu-header">
+      <span class="menu-title">Menu</span>
+      <button class="menu-close" id="menu-close" aria-label="Close menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <ul class="menu-list">
       <li><a href="/">Home</a></li>
       <li><a href="/archive/">Archive</a></li>
       <li><a href="/photos/">Photos</a></li>
       <li><a href="/about/">About</a></li>
     </ul>
-  </nav>
+  </div>
 </header>
 
 <style>
 .site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  background: rgba(255,255,255,0.95);
-  border-bottom: 1px solid #e0e0e0;
-  backdrop-filter: blur(10px);
-  z-index: 100;
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
 }
 
 .site-nav {
   max-width: 720px;
   margin: 0 auto;
   padding: 0 1.5rem;
-  height: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .site-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: #1a1a1a;
+  display: none;
+}
+
+.menu-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 99;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -280px;
+  width: 280px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  z-index: 100;
+  padding: 1.5rem;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.menu-title {
   font-size: 1.25rem;
   font-weight: 600;
   color: #1a1a1a;
-  text-decoration: none;
 }
 
-.nav-menu {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-menu a {
+.menu-close {
+  background: none;
+  border: none;
+  cursor: pointer;
   color: #666;
-  font-size: 0.95rem;
-  text-decoration: none;
-  transition: color 0.2s ease;
 }
 
-.nav-menu a:hover {
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li {
+  margin-bottom: 1rem;
+}
+
+.menu-list a {
   color: #1a1a1a;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.menu-list a:hover {
+  color: #666;
+}
+
+@media (min-width: 769px) {
+  .menu-button {
+    display: none;
+  }
+  
+  .mobile-menu,
+  .menu-overlay {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-button {
+    display: block;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
-  .site-header {
-    background: rgba(30,30,30,0.95);
-    border-bottom-color: #333;
-  }
-  
-  .site-title, .nav-menu a {
+  .site-title {
     color: #e0e0e0;
   }
   
-  .nav-menu a:hover {
-    color: #fff;
+  .menu-button {
+    color: #e0e0e0;
+  }
+  
+  .menu-header {
+    border-bottom-color: #333;
+  }
+  
+  .menu-title {
+    color: #e0e0e0;
+  }
+  
+  .menu-close {
+    color: #999;
+  }
+  
+  .menu-list a {
+    color: #e0e0e0;
+  }
+  
+  .menu-list a:hover {
+    color: #999;
+  }
+  
+  .mobile-menu {
+    background: #1e1e1e;
   }
 }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var menuToggle = document.getElementById('menu-toggle');
+  var menuClose = document.getElementById('menu-close');
+  var mobileMenu = document.getElementById('mobile-menu');
+  var overlay = document.getElementById('menu-overlay');
+  
+  function openMenu() {
+    mobileMenu.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  
+  function closeMenu() {
+    mobileMenu.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  
+  if (menuToggle) {
+    menuToggle.addEventListener('click', openMenu);
+  }
+  
+  if (menuClose) {
+    menuClose.addEventListener('click', closeMenu);
+  }
+  
+  if (overlay) {
+    overlay.addEventListener('click', closeMenu);
+  }
+  
+  var menuLinks = mobileMenu.querySelectorAll('a');
+  for (var i = 0; i < menuLinks.length; i++) {
+    menuLinks[i].addEventListener('click', closeMenu);
+  }
+});
+</script>

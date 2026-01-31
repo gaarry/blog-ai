@@ -2,11 +2,11 @@
 title: "About"
 date: 2026-01-31
 draft: false
-description: "About me"
+description: "About Gary"
 ---
 
-Hi, I'm [Your Name]!
+Hi, I'm Gary!
 
-I live in [City, Country] and work on [Your Work/Company](https://yourcompany.com).
+I live in [Your City] and work on [Your Work].
 
 Feel free to connect with me on [Twitter](https://twitter.com/your_twitter) or [send me an email](mailto:your@email.com).

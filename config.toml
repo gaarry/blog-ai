@@ -4,8 +4,8 @@ title = 'My Blog'
 theme = []
 
 [params]
-  description = 'A personal blog about technology, photography, and life.'
-  author = 'Your Name'
+  description = "Gary's personal blog about technology and life."
+  author = 'Gary'
   email = 'your@email.com'
   twitter = ''
   github = ''

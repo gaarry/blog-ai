@@ -5,12 +5,8 @@ draft: false
 description: "About me"
 ---
 
-Hi, I'm [Your Name]. I work on software and enjoy photography.
+Hi, I'm [Your Name]!
 
-I built this blog with [Hugo](https://gohugo.io/) and host it on [Cloudflare Pages](https://pages.cloudflare.com/).
+I live in [City, Country] and work on [Your Work/Company](https://yourcompany.com).
 
-## Connect
-
-- [Twitter](https://twitter.com/your_twitter)
-- [GitHub](https://github.com/your_github)
-- [Email](mailto:your@email.com)
+Feel free to connect with me on [Twitter](https://twitter.com/your_twitter) or [send me an email](mailto:your@email.com).

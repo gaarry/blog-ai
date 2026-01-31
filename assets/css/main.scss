@@ -193,6 +193,21 @@ a:hover {
 }
 
 /* Archive List */
+.archive-stats {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #666;
+}
+
+.archive-count {
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.archive-words {
+  color: #666;
+}
+
 .archive-list {
   list-style: none;
   padding: 0;
@@ -261,6 +276,31 @@ a:hover {
 .page-body {
   font-size: 1.05rem;
   line-height: 1.8;
+}
+
+/* Photos List - matches brianli.com */
+.photos-intro {
+  margin-bottom: 2rem;
+  color: #666;
+  font-size: 1rem;
+}
+
+.photos-list {
+  margin-top: 1.5rem;
+}
+
+.photos-list .photo-item {
+  margin-bottom: 0.5rem;
+}
+
+.photos-list .photo-item a {
+  text-decoration: none;
+  color: #0066cc;
+}
+
+.photos-list .photo-item a:hover {
+  text-decoration: underline;
+  color: #004499;
 }
 
 /* Site Footer - matches brianli.com */
@@ -415,8 +455,14 @@ code {
   
   .post-meta,
   .tag-link,
-  .archive-list time {
+  .archive-list time,
+  .archive-stats,
+  .photos-intro {
     color: #888;
+  }
+  
+  .archive-count {
+    color: #e0e0e0;
   }
   
   .post-excerpt {

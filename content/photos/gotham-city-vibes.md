@@ -3,7 +3,7 @@ title: "Getting Those Gotham City Vibes Right Now"
 date: 2018-11-11
 draft: false
 description: "A photography collection from BrianLi.com"
-coverImage: "/images/placeholder.jpg"
+coverImage: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=80"
 exif:
   camera: "Leica Q2"
   focalLength: "28mm"

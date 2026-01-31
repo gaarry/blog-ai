@@ -3,7 +3,7 @@ title: "Autumn in Tokyo"
 date: 2020-12-01
 draft: false
 description: "Fall colors in Tokyo's gardens."
-coverImage: "/images/placeholder.jpg"
+coverImage: "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=800&q=80"
 exif:
   camera: "Leica Q2"
   focalLength: "28mm"

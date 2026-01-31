@@ -3,7 +3,7 @@ title: "A LEGO City"
 date: 2018-11-28
 draft: false
 description: "A photography collection from BrianLi.com"
-coverImage: "/images/placeholder.jpg"
+coverImage: "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=800&q=80"
 exif:
   camera: "Leica Q2"
   focalLength: "28mm"

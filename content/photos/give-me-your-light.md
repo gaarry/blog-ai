@@ -3,7 +3,7 @@ title: "Give Me Your Light"
 date: 2018-11-19
 draft: false
 description: "A photography collection from BrianLi.com"
-coverImage: "/images/placeholder.jpg"
+coverImage: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
 exif:
   camera: "Leica Q2"
   focalLength: "28mm"

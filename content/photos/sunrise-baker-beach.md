@@ -3,7 +3,7 @@ title: "Sunrise at Baker Beach"
 date: 2018-11-24
 draft: false
 description: "A photography collection from BrianLi.com"
-coverImage: "/images/placeholder.jpg"
+coverImage: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80"
 exif:
   camera: "Leica Q2"
   focalLength: "28mm"

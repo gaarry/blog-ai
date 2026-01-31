@@ -3,7 +3,7 @@ title: "Autumn in Tokyo"
 date: 2018-11-18
 draft: false
 description: "A photography collection from BrianLi.com"
-coverImage: "/images/placeholder.jpg"
+coverImage: "https://images.unsplash.com/photo-1472457897821-70d3819a0e24?w=800&q=80"
 exif:
   camera: "Leica Q2"
   focalLength: "28mm"

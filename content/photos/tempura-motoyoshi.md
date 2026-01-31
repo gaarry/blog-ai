@@ -3,7 +3,7 @@ title: "Tempura Motoyoshi in Daikanyama"
 date: 2020-09-07
 draft: false
 description: "A photography collection from BrianLi.com"
-coverImage: "/images/placeholder.jpg"
+coverImage: "https://images.unsplash.com/photo-1579027989536-b7b1f875659b?w=800&q=80"
 exif:
   camera: "Leica Q2"
   focalLength: "28mm"

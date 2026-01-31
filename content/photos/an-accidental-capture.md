@@ -3,7 +3,7 @@ title: "An Accidental Capture"
 date: 2020-11-02
 draft: false
 description: "A photography collection from BrianLi.com"
-coverImage: "/images/placeholder.jpg"
+coverImage: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80"
 exif:
   camera: "Leica Q2"
   focalLength: "28mm"

@@ -3,7 +3,7 @@ title: "My Favorite Train Station"
 date: 2018-11-27
 draft: false
 description: "A photography collection from BrianLi.com"
-coverImage: "/images/placeholder.jpg"
+coverImage: "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80"
 exif:
   camera: "Leica Q2"
   focalLength: "28mm"

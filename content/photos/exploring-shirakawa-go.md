@@ -3,7 +3,7 @@ title: "Exploring Shirakawa-go"
 date: 2018-11-21
 draft: false
 description: "A photography collection from BrianLi.com"
-coverImage: "/images/placeholder.jpg"
+coverImage: "https://images.unsplash.com/photo-1480796927426-f609979314bd?w=800&q=80"
 exif:
   camera: "Leica Q2"
   focalLength: "28mm"

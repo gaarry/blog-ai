@@ -3,7 +3,7 @@ title: "Shibuya 109"
 date: 2018-11-16
 draft: false
 description: "A photography collection from BrianLi.com"
-coverImage: "/images/placeholder.jpg"
+coverImage: "https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=800&q=80"
 exif:
   camera: "Leica Q2"
   focalLength: "28mm"

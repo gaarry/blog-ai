@@ -5,6 +5,13 @@
       <h1 class="page-title">{{ .Title }}</h1>
     </header>
     <div class="page-body">
+      <div class="tags-cloud">
+        {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+        <a href="/tags/{{ $name | urlize }}/" class="tag-link">{{ $name }}</a>
+        {{ end }}
+      </div>
+      
+      <h2 style="margin-top: 3rem;">All Posts</h2>
       <ul class="archive-list">
         {{ range where .Site.RegularPages "Section" "posts" }}
         <li>

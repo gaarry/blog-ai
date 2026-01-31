@@ -1,0 +1,37 @@
+{{ define "main" }}
+<div class="container">
+  <article class="post-content">
+    <header class="post-header">
+      <div class="post-meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      </div>
+      <h1 class="post-title">{{ .Title }}</h1>
+      
+      {{ if .Params.exif }}
+      <div class="exif-info">
+        {{ with .Params.exif.camera }}<span class="exif-item"><strong>Camera:</strong> {{ . }}</span>{{ end }}
+        {{ with .Params.exif.lens }}<span class="exif-item"><strong>Lens:</strong> {{ . }}</span>{{ end }}
+        {{ with .Params.exif.focalLength }}<span class="exif-item"><strong>Focal:</strong> {{ . }}</span>{{ end }}
+        {{ with .Params.exif.aperture }}<span class="exif-item"><strong>Aperture:</strong> {{ . }}</span>{{ end }}
+        {{ with .Params.exif.shutterSpeed }}<span class="exif-item"><strong>Shutter:</strong> {{ . }}</span>{{ end }}
+        {{ with .Params.exif.iso }}<span class="exif-item"><strong>ISO:</strong> {{ . }}</span>{{ end }}
+      </div>
+      {{ end }}
+    </header>
+    
+    <div class="post-body">
+      {{ .Content }}
+    </div>
+    
+    {{ if .Params.photos }}
+    <div class="photo-gallery">
+      {{ range .Params.photos }}
+      <figure class="photo-figure">
+        <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+      </figure>
+      {{ end }}
+    </div>
+    {{ end }}
+  </article>
+</div>
+{{ end }}

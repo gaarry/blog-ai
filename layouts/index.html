@@ -12,13 +12,6 @@
       <div class="post-excerpt">
         {{ .Description }}
       </div>
-      {{ if .Params.tags }}
-      <div class="post-tags">
-        {{ range .Params.tags }}
-        <span class="tag">#{{ . }}</span>
-        {{ end }}
-      </div>
-      {{ end }}
       <a href="{{ .Permalink }}" class="read-more">Continue Reading →</a>
     </article>
     {{ end }}

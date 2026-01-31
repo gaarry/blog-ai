@@ -1,0 +1,46 @@
+baseURL = 'https://example.com/'
+languageCode = 'zh-cn'
+title = 'My Blog'
+theme = []
+
+# 网站设置
+[params]
+  description = '我的个人博客 - 技术写作与摄影分享'
+  author = 'Your Name'
+  email = 'your@email.com'
+  twitter = 'your_twitter'
+  github = 'your_github'
+
+# 导航菜单
+[[menu.main]]
+  name = '首页'
+  url = '/'
+  weight = 1
+
+[[menu.main]]
+  name = '归档'
+  url = '/archive/'
+  weight = 2
+
+[[menu.main]]
+  name = '照片'
+  url = '/photos/'
+  weight = 3
+
+[[menu.main]]
+  name = '关于'
+  url = '/about/'
+  weight = 4
+
+# 文章设置
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+
+# 分页设置
+[pagination]
+  pagerSize = 10
+
+# SEO 设置
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="pagination">
+  {{ if .Paginator.HasPrev }}
+  <a href="{{ .Paginator.Prev.URL }}" class="prev-page">← Newer Posts</a>
+  {{ end }}
+  
+  {{ if .Paginator.HasNext }}
+  <a href="{{ .Paginator.Next.URL }}" class="next-page">Older Posts →</a>
+  {{ end }}
+</div>
+{{ end }}

@@ -1,22 +1,27 @@
 {{ define "main" }}
 <div class="container">
   <section class="posts-list">
-    {{ range (.Paginate (first 10 (where .Site.RegularPages "Section" "posts"))).Pages }}
+    {{ range (.Paginator 10).Pages }}
     <article class="post-item">
       <div class="post-meta">
         <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        {{ if .ReadingTime }}
+        <span class="reading-time">{{ .ReadingTime }} min read</span>
+        {{ end }}
       </div>
       <h1 class="post-title">
         <a href="{{ .Permalink }}">{{ .Title }}</a>
       </h1>
-      <div class="post-excerpt">
-        {{ .Description }}
-      </div>
+      <p class="post-excerpt">{{ .Description }}</p>
       <a href="{{ .Permalink }}" class="read-more">Continue Reading →</a>
     </article>
     {{ end }}
     
-    {{ template "_internal/pagination.html" . }}
+    {{- if .Paginator.HasNext }}
+    <div class="pagination">
+      <a href="{{ .Paginator.Next.URL }}" class="next-page">Older Posts →</a>
+    </div>
+    {{- end }}
   </section>
 </div>
 {{ end }}

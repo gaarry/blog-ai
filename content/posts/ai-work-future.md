@@ -3,8 +3,11 @@ title: "AI and the Future of Work"
 date: 2026-01-31
 draft: false
 description: "How artificial intelligence is reshaping the job market - and what it means for workers everywhere."
+coverImage: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&q=80"
 tags: ["AI", "work", "employment", "future"]
 ---
+
+![Future of Work](https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&q=80)
 
 The question on everyone's mind: Will AI take my job? The answer is more nuanced than a simple yes or no.
 

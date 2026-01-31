@@ -5,15 +5,13 @@
       <h1 class="page-title">{{ .Title }}</h1>
     </header>
     <div class="page-body">
-      <ul class="archive-list">
-        {{ range where .Site.RegularPages "Section" "posts" }}
-        <li>
-          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-          <span>-</span>
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
-        </li>
-        {{ end }}
-      </ul>
+      {{ range where .Site.RegularPages "Section" "posts" }}
+      <div class="archive-item">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        <span>-</span>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </div>
+      {{ end }}
     </div>
   </article>
 </div>

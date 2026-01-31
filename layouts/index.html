@@ -2,6 +2,7 @@
 <div class="container">
   <section class="posts-list">
     {{ range (.Paginator 10).Pages }}
+    {{ if eq .Section "posts" }}
     <article class="post-item">
       <div class="post-meta">
         <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
@@ -15,6 +16,7 @@
       <p class="post-excerpt">{{ .Description }}</p>
       <a href="{{ .Permalink }}" class="read-more">Continue Reading →</a>
     </article>
+    {{ end }}
     {{ end }}
     
     {{- if .Paginator.HasNext }}

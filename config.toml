@@ -1,10 +1,10 @@
 baseURL = 'https://example.com/'
-languageCode = 'zh-cn'
+languageCode = 'en-us'
 title = 'My Blog'
 theme = []
 
 [params]
-  description = 'My personal blog - tech writing and photography'
+  description = 'A personal blog about technology, photography, and life.'
   author = 'Your Name'
   email = 'your@email.com'
   twitter = ''

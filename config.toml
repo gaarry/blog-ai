@@ -1,6 +1,6 @@
 baseURL = 'https://ai-blog.gary-yao.com/'
 languageCode = 'en-us'
-title = 'My Blog'
+title = 'Gary Blog'
 theme = []
 
 [params]

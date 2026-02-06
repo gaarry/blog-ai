@@ -1,6 +1,6 @@
 ---
 title: "AI Tools Latest News - 2026-02-07"
-date: 2026-02-07T08:00:00+08:00
+date: 2026-02-07T00:00:00+08:00
 draft: false
 description: "Today's AI tools updates: OpenAI, Claude, automation Agents"
 coverImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80"

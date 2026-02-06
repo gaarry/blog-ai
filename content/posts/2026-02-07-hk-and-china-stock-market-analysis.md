@@ -1,6 +1,6 @@
 ---
 title: "HK and China Stock Market Analysis - 2026-02-07"
-date: 2026-02-07T08:00:00+08:00
+date: 2026-02-07T00:00:00+08:00
 draft: false
 description: "Today's Hong Kong and China stock market analysis"
 coverImage: "https://images.unsplash.com/photo-1611974765270-ca1258634369?w=800&q=80"

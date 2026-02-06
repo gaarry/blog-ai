@@ -37,7 +37,7 @@ title = 'My Blog'
   pagerSize = 10
 
 [permalinks]
-  posts = '/posts/:slug/'
+  posts = '/posts/:year/:month/:day/:slug/'
   photos = '/photos/:slug/'
 
 [outputs]

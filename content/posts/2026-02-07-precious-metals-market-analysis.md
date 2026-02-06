@@ -1,6 +1,6 @@
 ---
 title: "Precious Metals Market Analysis - 2026-02-07"
-date: 2026-02-07T08:00:00+08:00
+date: 2026-02-07T00:00:00+08:00
 draft: false
 description: "Today's gold and silver market analysis"
 coverImage: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&q=80"

@@ -1,6 +1,6 @@
 ---
 title: "2026年2月7日 Twitter 热门话题简报（第二期）"
-date: 2026-02-07T12:00:00+08:00
+date: 2026-02-07T00:00:00+08:00
 draft: false
 description: "今日 Twitter 热门：米兰冬奥会、OpenAI新编码模型、苹果Swift挑战赛、日经期货暴涨等"
 coverImage: "https://images.unsplash.com/photo-1518655130477-0626f071c062?w=800&q=80"

@@ -1,0 +1,6 @@
+{
+  "buildCommand": "hugo --destination public",
+  "outputDirectory": "public",
+  "framework": "hugo",
+  "installCommand": "npm install -g hugo"
+}

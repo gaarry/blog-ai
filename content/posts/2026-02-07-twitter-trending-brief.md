@@ -1,6 +1,8 @@
 ---
 title: "推特热门简报 - 2026年2月7日午间版"
 date: 2026-02-07T00:00:00+08:00
+url: "/posts/2026-02-07-twitter-trending-brief/"
+slug: "2026-02-07-twitter-trending-brief"
 draft: false
 description: "涵盖AI、科技、政治等多个领域的推特热门话题"
 coverImage: "https://images.unsplash.com/photo-1611605698335-8b1569810432?w=800&q=80"

@@ -1,6 +1,6 @@
 ---
 title: "Twitter 热门话题简报 - 2026年2月7日"
-date: 2026-02-07T20:00:00+08:00
+date: 2026-02-07T08:00:00+08:00
 draft: false
 description: "今日 Twitter 热门话题：AI 代理技术、Anthropic Claude Opus 4.6、生成式 AI 在科学研究中的应用"
 coverImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80"

@@ -1,8 +1,8 @@
 ---
-title: "2026年2月10日 Twitter热门话题简报"
+title: "Twitter Trending Topics Briefing - February 10, 2026"
 date: 2026-02-09T23:59:00+08:00
 draft: false
-description: "今日Twitter热门话题涵盖AI科技、政治选举、体育赛事和娱乐热点"
+description: "Today's Twitter trending topics covering AI technology, political elections, sports events, and entertainment highlights"
 coverImage: "https://images.unsplash.com/photo-1611605698335-8b1569810432?w=800&q=80"
 tags: ["Twitter", "热门话题", "科技", "政治", "体育"]
 categories: ["热点追踪"]

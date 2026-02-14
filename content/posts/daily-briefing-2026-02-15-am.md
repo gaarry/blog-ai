@@ -1,6 +1,6 @@
 ---
 title: "2026年2月15日 每日简报：科技与全球热点"
-date: 2026-02-15T06:00:00+08:00
+date: 2026-02-15T00:00:00+08:00
 draft: false
 description: "涵盖Twitter热门话题、科技前沿、全球热点"
 coverImage: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80"

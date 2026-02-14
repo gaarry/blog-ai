@@ -1,3 +1,13 @@
+---
+title: "AI工具最新资讯简报 - 2026年2月14日"
+slug: "ai-tools-news-feb-14-2026"
+date: 2026-02-14T13:43:00+08:00
+draft: false
+description: "Anthropic Opus 4.6发布，MIT AI研究突破，Google DeepMind动态"
+categories: ["AI"]
+tags: ["AI", "科技", "资讯"]
+---
+
 # AI工具最新资讯简报 - 2026年2月14日
 
 ## 📰 本期重点

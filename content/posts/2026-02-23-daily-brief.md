@@ -1,5 +1,5 @@
 title: "每日简报 2026年2月23日"
-date: 2026-02-22T00:00:00+08:00
+date: 2026-02-23T00:00:00+08:00
 draft: false
 description: "每日科技、科学要闻汇总"
 coverImage: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80"

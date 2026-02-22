@@ -1,5 +1,3 @@
-Found 70 articles
----
 title: "每日简报 2026年2月22日"
 date: 2026-02-22T22:00:00+08:00
 draft: false

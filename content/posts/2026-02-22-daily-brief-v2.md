@@ -1,5 +1,3 @@
-Fetching news...
-Found 70 articles
 ---
 title: "每日简报 2026年2月22日"
 date: 2026-02-22T19:00:00+08:00

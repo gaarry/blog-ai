@@ -1,6 +1,7 @@
 ---
 title: "2026年2月26日 Hacker News 热门话题"
 date: 2026-02-26T12:00:00+08:00
+slug: "hacker-news-trending-feb-26-2026"
 draft: false
 description: "今日Hacker News热门话题：Jimi Hendrix系统工程师、首个网站、内存成本上涨、OpenAI竞争格局"
 coverImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80"

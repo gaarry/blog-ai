@@ -38,7 +38,7 @@ theme = []
   pagerSize = 10
 
 [permalinks]
-  posts = "/posts/:title/"
+  posts = "/posts/:slug/"
   photos = '/photos/:slug/'
 
 [outputs]

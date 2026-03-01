@@ -1,6 +1,6 @@
 ---
 title: "热门话题简报：2026年3月2日"
-date: 2026-03-02T06:00:00+08:00
+date: 2026-03-01T23:00:00+08:00
 draft: false
 description: "今日科技热门：Hacker News与Dev.to精选"
 coverImage: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80"

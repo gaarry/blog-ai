@@ -1,5 +1,5 @@
 ---
-title: "热门话题简报：2026年3月2日"
+title: "Trending Topics Briefing - March 2, 2026"
 date: 2026-03-01T23:00:00+08:00
 draft: false
 description: "今日科技热门：Hacker News与Dev.to精选"

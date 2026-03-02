@@ -1,6 +1,6 @@
 ---
 title: "热门话题简报：2026年3月2日（午间版）"
-date: 2026-03-02T11:55:00+08:00
+date: 2026-03-02T07:00:00+08:00
 draft: false
 description: "今日热门话题：AI开发工具、开发者健康、MCP协议"
 coverImage: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80"

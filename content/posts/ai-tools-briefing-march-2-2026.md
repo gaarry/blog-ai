@@ -1,6 +1,6 @@
 ---
 title: "AI工具最新资讯简报：2026年3月2日"
-date: 2026-03-02T07:55:00+08:00
+date: 2026-03-02T07:50:00+08:00
 draft: false
 description: "今日AI工具动态：MCP、Agents、RAG技术进展"
 coverImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80"

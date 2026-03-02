@@ -9,6 +9,17 @@
         {{ end }}
       </div>
       <h1 class="post-title">{{ .Title }}</h1>
+      
+      {{ if or .Params.description }}
+      <div class="section-overview">
+        <ul>
+        {{ range $i, $line := (split .Params.description "；") }}
+          {{ if $line }}<li>{{ $line | strings.TrimSuffix "；" }}</li>{{ end }}
+        {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+      
       {{ if .Params.tags }}
       <div class="post-tags-inline">
         {{ range $index, $tag := .Params.tags }}

@@ -1,0 +1,165 @@
+{
+  "metadata": {
+    "scored_at": "2026-03-03T10:30:00+08:00",
+    "total_articles": 156,
+    "scoring_version": "1.0.0",
+    "weights": {
+      "cross_verification": 0.40,
+      "community_engagement": 0.25,
+      "source_authority": 0.20,
+      "timeliness": 0.15
+    }
+  },
+  "sources": [
+    {
+      "id": "openai_blog_20260303_001",
+      "url": "https://openai.com/blog/partnership-with-department-of-defense",
+      "title": "Our agreement with the Department of Defense",
+      "summary": "OpenAI announces partnership with DoD for deploying AI models on classified networks with safety guardrails.",
+      "content": "We're announcing our agreement with the U.S. Department of Defense...",
+      "source": "OpenAI Blog",
+      "domain": "openai.com",
+      "published": "2026-03-02T15:30:00Z",
+      "author": "Sam Altman",
+      "tags": ["partnership", "defense", "safety"],
+      "language": "en",
+      "engagement": {
+        "total_score": 92.5,
+        "hacker_news": {"item_id": 39582341, "score": 847, "comments": 523},
+        "reddit": {"post_id": "1b3xyz9", "subreddit": "MachineLearning", "upvotes": 3421, "comments": 892}
+      },
+      "score": 95.2,
+      "score_breakdown": {
+        "cross_verification": {
+          "score": 95.0,
+          "weight": 0.40,
+          "weighted_score": 38.0,
+          "related_articles": [
+            "techcrunch_20260303_002",
+            "theverge_20260303_003",
+            "mittr_20260303_004"
+          ],
+          "similarity": 0.85
+        },
+        "community_engagement": {
+          "score": 92.5,
+          "weight": 0.25,
+          "weighted_score": 23.1,
+          "hn_score": 84.7,
+          "reddit_score": 85.5
+        },
+        "source_authority": {
+          "score": 100.0,
+          "weight": 0.20,
+          "weighted_score": 20.0,
+          "source_type": "official_blog"
+        },
+        "timeliness": {
+          "score": 93.8,
+          "weight": 0.15,
+          "weighted_score": 14.1,
+          "hours_ago": 18.5
+        }
+      },
+      "rank": 1
+    },
+    {
+      "id": "techcrunch_20260303_002",
+      "url": "https://techcrunch.com/2026/03/02/openai-pentagon-deal-raises-questions",
+      "title": "OpenAI's Pentagon deal raises questions about AI oversight",
+      "summary": "Tech industry experts question the enforceability of OpenAI's stated safety principles.",
+      "content": "Hours after Anthropic was banned from federal contracts...",
+      "source": "TechCrunch",
+      "domain": "techcrunch.com",
+      "published": "2026-03-02T18:45:00Z",
+      "engagement": {
+        "total_score": 88.3,
+        "hacker_news": {"score": 612, "comments": 387},
+        "reddit": {"upvotes": 2156, "comments": 543}
+      },
+      "score": 91.7,
+      "score_breakdown": {
+        "cross_verification": {
+          "score": 95.0,
+          "weight": 0.40,
+          "weighted_score": 38.0,
+          "related_articles": [
+            "openai_blog_20260303_001",
+            "theverge_20260303_003",
+            "mittr_20260303_004"
+          ],
+          "similarity": 0.87
+        },
+        "community_engagement": {
+          "score": 88.3,
+          "weight": 0.25,
+          "weighted_score": 22.1,
+          "hn_score": 76.5,
+          "reddit_score": 71.9
+        },
+        "source_authority": {
+          "score": 80.0,
+          "weight": 0.20,
+          "weighted_score": 16.0,
+          "source_type": "tech_media"
+        },
+        "timeliness": {
+          "score": 100.0,
+          "weight": 0.15,
+          "weighted_score": 15.0,
+          "hours_ago": 15.2
+        }
+      },
+      "rank": 2
+    },
+    {
+      "id": "theverge_20260303_003",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/2026/3/2/anthropic-banned-openai-wins-pentagon",
+      "title": "How OpenAI caved to the Pentagon on AI surveillance",
+      "summary": "Analysis of the differences between OpenAI's and Anthropic's approaches to military AI contracts.",
+      "content": "The contrast between OpenAI and Anthropic's responses...",
+      "source": "The Verge",
+      "domain": "theverge.com",
+      "published": "2026-03-02T20:15:00Z",
+      "engagement": {
+        "total_score": 85.7,
+        "hacker_news": {"score": 534, "comments": 298},
+        "reddit": {"upvotes": 1823, "comments": 421}
+      },
+      "score": 89.4,
+      "score_breakdown": {
+        "cross_verification": {
+          "score": 95.0,
+          "weight": 0.40,
+          "weighted_score": 38.0,
+          "related_articles": [
+            "openai_blog_20260303_001",
+            "techcrunch_20260303_002",
+            "mittr_20260303_004"
+          ],
+          "similarity": 0.89
+        },
+        "community_engagement": {
+          "score": 85.7,
+          "weight": 0.25,
+          "weighted_score": 21.4,
+          "hn_score": 66.8,
+          "reddit_score": 60.8
+        },
+        "source_authority": {
+          "score": 80.0,
+          "weight": 0.20,
+          "weighted_score": 16.0,
+          "source_type": "tech_media"
+        },
+        "timeliness": {
+          "score": 93.3,
+          "weight": 0.15,
+          "weighted_score": 14.0,
+          "hours_ago": 13.7
+        }
+      },
+      "rank": 3
+    }
+  ]
+}

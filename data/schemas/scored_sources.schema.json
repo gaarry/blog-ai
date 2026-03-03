@@ -1,0 +1,117 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Scored Sources Schema",
+  "description": "Schema for sources with algorithmic scoring",
+  "type": "object",
+  "required": ["metadata", "sources"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["scored_at", "total_articles", "scoring_version"],
+      "properties": {
+        "scored_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "total_articles": {
+          "type": "integer"
+        },
+        "scoring_version": {
+          "type": "string",
+          "description": "Version of scoring algorithm"
+        },
+        "weights": {
+          "type": "object",
+          "properties": {
+            "cross_verification": {"type": "number"},
+            "community_engagement": {"type": "number"},
+            "source_authority": {"type": "number"},
+            "timeliness": {"type": "number"}
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "url", "title", "source", "published", "score", "score_breakdown"],
+        "properties": {
+          "id": {"type": "string"},
+          "url": {"type": "string"},
+          "title": {"type": "string"},
+          "summary": {"type": "string"},
+          "content": {"type": "string"},
+          "source": {"type": "string"},
+          "domain": {"type": "string"},
+          "published": {"type": "string"},
+          "author": {"type": "string"},
+          "tags": {"type": "array"},
+          "language": {"type": "string"},
+          "engagement": {"type": "object"},
+          "score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "Final weighted score"
+          },
+          "score_breakdown": {
+            "type": "object",
+            "required": ["cross_verification", "community_engagement", "source_authority", "timeliness"],
+            "properties": {
+              "cross_verification": {
+                "type": "object",
+                "properties": {
+                  "score": {"type": "number"},
+                  "weight": {"type": "number"},
+                  "weighted_score": {"type": "number"},
+                  "related_articles": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "description": "IDs of related articles"
+                  },
+                  "similarity": {"type": "number"}
+                }
+              },
+              "community_engagement": {
+                "type": "object",
+                "properties": {
+                  "score": {"type": "number"},
+                  "weight": {"type": "number"},
+                  "weighted_score": {"type": "number"},
+                  "hn_score": {"type": "number"},
+                  "reddit_score": {"type": "number"}
+                }
+              },
+              "source_authority": {
+                "type": "object",
+                "properties": {
+                  "score": {"type": "number"},
+                  "weight": {"type": "number"},
+                  "weighted_score": {"type": "number"},
+                  "source_type": {
+                    "type": "string",
+                    "enum": ["official_blog", "tech_media", "newsletter", "community", "aggregator"]
+                  }
+                }
+              },
+              "timeliness": {
+                "type": "object",
+                "properties": {
+                  "score": {"type": "number"},
+                  "weight": {"type": "number"},
+                  "weighted_score": {"type": "number"},
+                  "hours_ago": {"type": "number"}
+                }
+              }
+            }
+          },
+          "rank": {
+            "type": "integer",
+            "description": "Rank among all scored articles"
+          }
+        }
+      }
+    }
+  }
+}

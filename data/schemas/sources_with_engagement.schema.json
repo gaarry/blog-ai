@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sources with Engagement Schema",
+  "description": "Schema for sources enriched with community engagement data",
+  "type": "object",
+  "required": ["metadata", "sources"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["collected_at", "enriched_at", "total_articles", "matched_articles"],
+      "properties": {
+        "collected_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "enriched_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "total_articles": {
+          "type": "integer"
+        },
+        "matched_articles": {
+          "type": "integer",
+          "description": "Articles with engagement data found"
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "url", "title", "source", "domain", "published", "content", "engagement"],
+        "properties": {
+          "id": {"type": "string"},
+          "url": {"type": "string"},
+          "title": {"type": "string"},
+          "summary": {"type": "string"},
+          "content": {"type": "string"},
+          "source": {"type": "string"},
+          "domain": {"type": "string"},
+          "published": {"type": "string"},
+          "author": {"type": "string"},
+          "tags": {"type": "array", "items": {"type": "string"}},
+          "language": {"type": "string"},
+          "engagement": {
+            "type": "object",
+            "required": ["total_score"],
+            "properties": {
+              "total_score": {
+                "type": "number",
+                "description": "Combined engagement score (0-100)"
+              },
+              "hacker_news": {
+                "type": "object",
+                "properties": {
+                  "item_id": {"type": "integer"},
+                  "score": {"type": "integer"},
+                  "comments": {"type": "integer"},
+                  "url": {"type": "string"}
+                }
+              },
+              "reddit": {
+                "type": "object",
+                "properties": {
+                  "post_id": {"type": "string"},
+                  "subreddit": {"type": "string"},
+                  "upvotes": {"type": "integer"},
+                  "comments": {"type": "integer"},
+                  "url": {"type": "string"}
+                }
+              },
+              "twitter": {
+                "type": "object",
+                "properties": {
+                  "tweet_id": {"type": "string"},
+                  "likes": {"type": "integer"},
+                  "retweets": {"type": "integer"},
+                  "replies": {"type": "integer"}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Selected Topics Schema",
+  "description": "Schema for final selected topics for article generation",
+  "type": "object",
+  "required": ["metadata", "deep_articles", "quick_news"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["selected_at", "date", "total_candidates"],
+      "properties": {
+        "selected_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "Publication date (YYYY-MM-DD)"
+        },
+        "total_candidates": {
+          "type": "integer",
+          "description": "Total articles evaluated"
+        },
+        "selection_criteria": {
+          "type": "object",
+          "properties": {
+            "min_score": {"type": "number"},
+            "diversity_enabled": {"type": "boolean"},
+            "duplicate_check_days": {"type": "integer"}
+          }
+        }
+      }
+    },
+    "deep_articles": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["theme", "category", "sources"],
+        "properties": {
+          "theme": {
+            "type": "string",
+            "description": "Main theme/topic of the article"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "model_release",
+              "ai_agent",
+              "safety_ethics",
+              "industry_news",
+              "tools_apps",
+              "research",
+              "policy_regulation"
+            ]
+          },
+          "suggested_title": {
+            "type": "string",
+            "description": "AI-suggested article title"
+          },
+          "sources": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 5,
+            "items": {
+              "type": "object",
+              "required": ["id", "url", "title", "domain", "content", "published"],
+              "properties": {
+                "id": {"type": "string"},
+                "url": {"type": "string"},
+                "title": {"type": "string"},
+                "summary": {"type": "string"},
+                "content": {"type": "string"},
+                "domain": {"type": "string"},
+                "source": {"type": "string"},
+                "published": {"type": "string"},
+                "score": {"type": "number"}
+              }
+            }
+          },
+          "key_points": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "Key points extracted from sources"
+          }
+        }
+      }
+    },
+    "quick_news": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "required": ["title", "url", "domain", "summary"],
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "News headline"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "domain": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string",
+            "maxLength": 150,
+            "description": "Brief summary (max 150 chars)"
+          },
+          "published": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "score": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  }
+}

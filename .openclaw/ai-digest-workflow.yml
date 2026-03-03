@@ -1,0 +1,568 @@
+# OpenClaw AI 资讯速览自动化工作流
+# 每天自动生成 AI 行业资讯简报
+
+name: ai-digest-daily-generator
+version: 1.0.0
+description: 自动采集、筛选、生成每日 AI 资讯简报
+
+# 定时执行：每天 18:00 (UTC+8)
+schedule:
+  cron: "0 10 * * *"  # UTC 10:00 = UTC+8 18:00
+  timezone: "Asia/Shanghai"
+
+# 环境变量
+env:
+  REPO_PATH: /Users/gary/git/blog-ai
+  CONTENT_DIR: content/posts
+  TEMPLATE_PATH: BLOG_TEMPLATE.md
+  SYSTEM_PROMPT_PATH: AI_DIGEST_SYSTEM_PROMPT.md
+
+# 工作流步骤
+workflow:
+  # ============================================
+  # 步骤 1: 信息采集
+  # ============================================
+  - name: collect_sources
+    description: 从 20+ 英文信源采集最新 AI 资讯
+    agent: web_scraper
+    timeout: 600  # 10 分钟
+
+    config:
+      sources:
+        # 公司官方博客
+        - name: OpenAI Blog
+          url: https://openai.com/blog
+          type: rss
+          feed: https://openai.com/blog/rss.xml
+          priority: high
+
+        - name: Anthropic News
+          url: https://anthropic.com/news
+          type: rss
+          feed: https://www.anthropic.com/news/rss.xml
+          priority: high
+
+        - name: Google AI Blog
+          url: https://ai.googleblog.com
+          type: rss
+          feed: https://ai.googleblog.com/feeds/posts/default
+          priority: high
+
+        - name: DeepMind Blog
+          url: https://deepmind.google/discover/blog
+          type: html
+          selector: article
+          priority: high
+
+        - name: Meta AI Blog
+          url: https://ai.meta.com/blog
+          type: rss
+          feed: https://ai.meta.com/blog/rss/
+          priority: high
+
+        - name: NVIDIA AI Blog
+          url: https://blogs.nvidia.com/blog/category/deep-learning
+          type: rss
+          feed: https://blogs.nvidia.com/feed/
+          priority: medium
+
+        # 技术媒体
+        - name: MIT Technology Review
+          url: https://www.technologyreview.com/topic/artificial-intelligence/
+          type: rss
+          feed: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+          priority: high
+
+        - name: TechCrunch AI
+          url: https://techcrunch.com/category/artificial-intelligence/
+          type: rss
+          feed: https://techcrunch.com/category/artificial-intelligence/feed/
+          priority: high
+
+        - name: The Verge AI
+          url: https://www.theverge.com/ai-artificial-intelligence
+          type: rss
+          feed: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+          priority: high
+
+        - name: Ars Technica AI
+          url: https://arstechnica.com/ai/
+          type: rss
+          feed: https://feeds.arstechnica.com/arstechnica/technology-lab
+          priority: medium
+
+        - name: Wired AI
+          url: https://www.wired.com/tag/artificial-intelligence/
+          type: rss
+          feed: https://www.wired.com/feed/tag/ai/latest/rss
+          priority: medium
+
+        # 社区平台
+        - name: Hacker News
+          url: https://news.ycombinator.com
+          type: api
+          api_url: https://hacker-news.firebaseio.com/v0/topstories.json
+          filter_keywords: ["AI", "LLM", "GPT", "Claude", "machine learning"]
+          min_score: 100
+          priority: high
+
+        - name: HuggingFace Papers
+          url: https://huggingface.co/papers
+          type: api
+          api_url: https://huggingface.co/api/daily_papers
+          priority: medium
+
+        # Newsletter (需要邮箱订阅或 API)
+        - name: Import AI
+          url: https://jack-clark.net
+          type: rss
+          feed: https://jack-clark.net/feed/
+          priority: medium
+
+      # 采集参数
+      params:
+        time_range: 24h  # 采集最近 24 小时的内容
+        max_items_per_source: 20
+        include_content: true  # 获取完整文章内容
+
+    output:
+      file: data/sources_raw.json
+      format: json
+      schema:
+        - url: string
+        - title: string
+        - content: string
+        - published: datetime
+        - source: string
+        - domain: string
+
+  # ============================================
+  # 步骤 2: 社区参与度数据采集
+  # ============================================
+  - name: collect_engagement
+    description: 获取社区参与度数据（HN 投票、Reddit 讨论等）
+    agent: engagement_tracker
+    timeout: 300  # 5 分钟
+
+    config:
+      platforms:
+        - name: Hacker News
+          api: https://hacker-news.firebaseio.com/v0/
+          metrics: [score, comments]
+
+        - name: Reddit
+          subreddits: [MachineLearning, artificial, LocalLLaMA]
+          metrics: [upvotes, comments]
+
+      match_urls: true  # 匹配步骤 1 中采集的 URL
+
+    input:
+      file: data/sources_raw.json
+
+    output:
+      file: data/sources_with_engagement.json
+
+  # ============================================
+  # 步骤 3: 算法评分
+  # ============================================
+  - name: score_articles
+    description: 基于多维度对文章进行评分
+    agent: scorer
+    timeout: 180  # 3 分钟
+
+    config:
+      scoring_criteria:
+        # 多源交叉验证 (40%)
+        cross_verification:
+          weight: 0.40
+          method: url_similarity  # 检查相同事件的不同报道
+          threshold: 0.7
+          bonus:
+            official_plus_media: 20  # 官方公告 + 媒体报道
+            three_plus_sources: 15   # 3+ 独立来源
+
+        # 社区参与度 (25%)
+        community_engagement:
+          weight: 0.25
+          metrics:
+            hn_score:
+              threshold: 200
+              max_score: 100
+            reddit_upvotes:
+              threshold: 500
+              max_score: 100
+            comments:
+              threshold: 50
+              max_score: 50
+
+        # 来源权威性 (20%)
+        source_authority:
+          weight: 0.20
+          ranking:
+            official_blog: 100
+            tech_media: 80
+            newsletter: 70
+            community: 60
+            aggregator: 40
+
+        # 时效性 (15%)
+        timeliness:
+          weight: 0.15
+          decay:
+            0-6h: 100
+            6-12h: 90
+            12-18h: 75
+            18-24h: 60
+            24h+: 30
+
+      # 去重
+      deduplication:
+        enabled: true
+        similarity_threshold: 0.8
+        keep: highest_score
+
+    input:
+      file: data/sources_with_engagement.json
+
+    output:
+      file: data/scored_sources.json
+      format: json
+      schema:
+        - url: string
+        - title: string
+        - content: string
+        - score: float
+        - score_breakdown:
+            cross_verification: float
+            community_engagement: float
+            source_authority: float
+            timeliness: float
+
+  # ============================================
+  # 步骤 4: 主题选择
+  # ============================================
+  - name: select_topics
+    description: 选择 3 个深度主题 + 5 个快讯
+    agent: topic_selector
+    model: claude-3-5-sonnet-20241022
+    timeout: 300  # 5 分钟
+
+    config:
+      selection_criteria:
+        deep_articles:
+          count: 3
+          min_score: 70
+          min_sources: 2  # 至少 2 个来源
+          diversity:
+            enabled: true
+            categories:
+              - model_release
+              - ai_agent
+              - safety_ethics
+              - industry_news
+              - tools_apps
+              - research
+              - policy_regulation
+            max_per_category: 1  # 每个类别最多 1 篇
+
+        quick_news:
+          count: 5
+          min_score: 50
+          max_length: 150  # 字符数
+
+      # 去重检查
+      duplicate_check:
+        enabled: true
+        lookback_days: 7
+        similarity_threshold: 0.7
+
+      # 主题分组
+      clustering:
+        enabled: true
+        method: semantic_similarity
+        threshold: 0.75
+        merge_related: true  # 将相关文章合并为一个主题
+
+    input:
+      file: data/scored_sources.json
+      history_dir: data/history/  # 历史文章用于去重
+
+    output:
+      file: data/selected_topics.json
+      format: json
+      schema:
+        deep_articles:
+          - theme: string
+            category: string
+            sources: array
+        quick_news:
+          - title: string
+            url: string
+            summary: string
+
+  # ============================================
+  # 步骤 5: 内容生成
+  # ============================================
+  - name: generate_article
+    description: 使用 LLM 生成文章内容
+    agent: writer
+    model: claude-3-5-sonnet-20241022
+    timeout: 600  # 10 分钟
+
+    config:
+      # 系统提示词
+      system_prompt_file: ${SYSTEM_PROMPT_PATH}
+
+      # 生成参数
+      generation:
+        temperature: 0.3  # 较低温度，保持客观性
+        max_tokens: 8000
+        top_p: 0.95
+
+      # 输出格式
+      output_format:
+        template_file: ${TEMPLATE_PATH}
+        filename_pattern: "{date}-ai-digest.md"
+        date_format: "%Y-%m-%d"
+
+      # 质量要求
+      quality_requirements:
+        min_sources_per_article: 2
+        max_sources_per_article: 5
+        min_key_tags: 2
+        max_key_tags: 4
+        target_reading_time: 5  # 分钟
+
+    input:
+      file: data/selected_topics.json
+
+    output:
+      file: ${CONTENT_DIR}/{date}-ai-digest.md
+
+    prompt: |
+      你将收到今天筛选的 3 个深度主题和 5 个快讯，每个主题包含多个来源文章。
+
+      请按照以下要求生成今日的 AI 资讯简报：
+
+      1. 仔细阅读所有来源文章的完整内容
+      2. 综合多个来源，形成连贯的叙事
+      3. 严格遵循系统提示词中的写作原则
+      4. 使用 BLOG_TEMPLATE.md 中的格式
+      5. 确保所有事实都有来源支撑
+
+      输入数据：
+      {input_json}
+
+      请生成完整的 Markdown 文件。
+
+  # ============================================
+  # 步骤 6: 质量检查
+  # ============================================
+  - name: quality_check
+    description: 自动检查生成内容的质量
+    agent: validator
+    timeout: 120  # 2 分钟
+
+    config:
+      checks:
+        # 禁用词汇检查
+        banned_words:
+          enabled: true
+          words_file: data/banned_words.txt
+          action: fail  # 发现禁用词则失败
+
+        # 链接有效性检查
+        link_validity:
+          enabled: true
+          timeout: 5  # 每个链接 5 秒超时
+          retry: 2
+          action: warn  # 链接失效仅警告
+
+        # HTML 结构检查
+        html_structure:
+          enabled: true
+          required_elements:
+            - article-section
+            - article-num
+            - key-tags
+            - sources-list
+          action: fail
+
+        # 来源数量检查
+        source_count:
+          enabled: true
+          min_per_article: 2
+          max_per_article: 5
+          action: fail
+
+        # 文章数量检查
+        article_count:
+          enabled: true
+          deep_articles: 3
+          quick_news: 3-5
+          action: fail
+
+        # 重复内容检查
+        duplicate_content:
+          enabled: true
+          history_days: 7
+          similarity_threshold: 0.8
+          action: warn
+
+    input:
+      file: ${CONTENT_DIR}/{date}-ai-digest.md
+
+    output:
+      file: data/quality_report.json
+      format: json
+      schema:
+        - check: string
+        - status: enum[pass, warn, fail]
+        - message: string
+        - details: object
+
+  # ============================================
+  # 步骤 7: 发布
+  # ============================================
+  - name: publish
+    description: 提交并推送到 GitHub
+    agent: git_publisher
+    timeout: 180  # 3 分钟
+
+    config:
+      git:
+        repo_path: ${REPO_PATH}
+        branch: main
+
+      commit:
+        message_template: |
+          Add: AI资讯简报 {date}
+
+          - {article_count} 篇深度文章
+          - {news_count} 条快讯
+          - 来源：{source_count} 个一手信源
+
+          Co-Authored-By: OpenClaw <noreply@openclaw.com>
+
+      push:
+        enabled: true
+        remote: origin
+
+    input:
+      file: ${CONTENT_DIR}/{date}-ai-digest.md
+      quality_report: data/quality_report.json
+
+    conditions:
+      # 只有质量检查全部通过才发布
+      - quality_report.all_passed == true
+
+    output:
+      commit_hash: string
+      push_status: string
+
+  # ============================================
+  # 步骤 8: 通知
+  # ============================================
+  - name: notify
+    description: 发送生成结果通知
+    agent: notifier
+    timeout: 60  # 1 分钟
+
+    config:
+      channels:
+        - type: email
+          to: your@email.com
+          subject: "AI资讯简报 {date} 已生成"
+          template: |
+            今日 AI 资讯简报已成功生成并发布。
+
+            文章数：{article_count}
+            快讯数：{news_count}
+            来源数：{source_count}
+            质量检查：{quality_status}
+
+            查看：https://ai-blog.gary-yao.com/posts/{date}/ai-digest/
+
+        - type: slack
+          webhook: ${SLACK_WEBHOOK_URL}
+          message: |
+            ✅ AI资讯简报 {date} 已发布
+            📊 {article_count} 篇文章 | {news_count} 条快讯
+            🔗 https://ai-blog.gary-yao.com/posts/{date}/ai-digest/
+
+    input:
+      quality_report: data/quality_report.json
+      publish_result: step.publish.output
+
+    conditions:
+      - step.publish.status == "success"
+
+# ============================================
+# 错误处理
+# ============================================
+error_handling:
+  # 失败重试
+  retry:
+    max_attempts: 3
+    backoff: exponential
+    initial_delay: 60  # 秒
+
+  # 失败通知
+  on_failure:
+    notify:
+      - type: email
+        to: your@email.com
+        subject: "⚠️ AI资讯简报生成失败"
+        template: |
+          工作流执行失败。
+
+          失败步骤：{failed_step}
+          错误信息：{error_message}
+
+          请检查日志：{log_file}
+
+  # 降级策略
+  fallback:
+    # 如果主模型失败，使用备用模型
+    alternative_model: gpt-4-turbo-preview
+    # 如果无法生成，跳过当天
+    skip_on_failure: true
+
+# ============================================
+# 日志与监控
+# ============================================
+logging:
+  level: INFO
+  file: logs/ai-digest-{date}.log
+  format: "[{timestamp}] {level} - {step} - {message}"
+
+monitoring:
+  metrics:
+    - execution_time
+    - source_count
+    - article_count
+    - quality_score
+    - publish_status
+
+  alerts:
+    - condition: execution_time > 1800  # 超过 30 分钟
+      action: notify
+
+    - condition: quality_score < 80
+      action: notify
+
+    - condition: publish_status == "failed"
+      action: notify
+
+# ============================================
+# 数据保留
+# ============================================
+data_retention:
+  # 保留原始数据 7 天
+  raw_sources: 7d
+  # 保留评分数据 30 天
+  scored_sources: 30d
+  # 保留质量报告 90 天
+  quality_reports: 90d
+  # 永久保留已发布文章
+  published_articles: forever

@@ -40,11 +40,11 @@ categories: ["AI资讯"]
 
 <p>claude.com/import-memory页面上只有一段提示词和一个按钮。点击后，用户拿到一段指令，粘贴进ChatGPT，要求它导出所有关于你的记忆：语气偏好、格式习惯、「永远做X，不要做Y」的个性化设定，全部以代码块输出。复制，粘贴回Claude，迁移完成。</p>
 
-<p>功能落地的时机精确。几天前，Anthropic与五角大楼的合作争议引发大量关注。Claude随即冲上苹果应用商店免费榜第一，但涌入的新用户大多只是围观，注意力窗口转瞬即逝。import-memory要做的就是在窗口关闭之前把围观变成迁移——一旦写作偏好、项目背景、沟通习惯都导入了新平台，重新训练另一个助手的成本就是留下来最实际的理由。</p>
+功能落地的时机精确。几天前，Anthropic与五角大楼的合作争议引发大量关注。Claude随即冲上苹果应用商店免费榜第一，但涌入的新用户大多只是围观，注意力窗口转瞬即逝。import-memory要做的就是在窗口关闭之前把围观变成迁移——一旦写作偏好、项目背景、沟通习惯都导入了新平台，重新训练另一个助手的成本就是留下来最实际的理由。
 
-<p>技术博主Willison拆解了这段提示词的设计：它不只要求导出记忆条目，还明确要求保留用户原话措辞，覆盖从回复风格到个人项目细节的每一个维度。用户花几个月在其他助手上积累的偏好数据，一次复制粘贴就存进了Claude。</p>
+技术博主Willison拆解了这段提示词的设计：它不只要求导出记忆条目，还明确要求保留用户原话措辞，覆盖从回复风格到个人项目细节的每一个维度。用户花几个月在其他助手上积累的偏好数据，一次复制粘贴就存进了Claude。
 
-<p>这意味着什么？用户换产品通常靠产品说话，更快的模型或更低的价格。但这一周Claude没有发新版本，也没有降价。排名变动中最显眼的变量，是一个政治立场。技术社区数百条评论印证了这一点，讨论的焦点不是「哪个模型更好用」，而是「哪家公司值得信任」。政府向Anthropic施压的同一周，Claude的应用商店排名反而一路走高。</p>
+这意味着什么？用户换产品通常靠产品说话，更快的模型或更低的价格。但这一周Claude没有发新版本，也没有降价。排名变动中最显眼的变量，是一个政治立场。技术社区数百条评论印证了这一点，讨论的焦点不是「哪个模型更好用」，而是「哪家公司值得信任」。政府向Anthropic施压的同一周，Claude的应用商店排名反而一路走高。
 
 <div class="key-tags">
 <span class="key-tag">用户迁移首次由政治立场而非产品驱动</span>
@@ -58,18 +58,14 @@ categories: ["AI资讯"]
 <a href="https://simonwillison.net/2026/Mar/1/claude-import-memory/" class="source-item" target="_blank"><span class="source-title">Simon Willison分析</span><span class="source-domain">simonwillison.net</span></a>
 <a href="https://techcrunch.com/2026/03/01/anthropics-claude-rises-to-no-2-in-the-app-store-following-pentagon-dispute/" class="source-item" target="_blank"><span class="source-title">TechCrunch: Claude rises to No. 1</span><span class="source-domain">techcrunch.com</span></a>
 </div>
-</div>
 
-<div class="article-section">
-<h2><span class="article-num">03</span>ChatGPT周活达9亿，SaaS被AI agent蚕食</h2>
+垂直SaaS工具正在被AI agent蚕食，TechCrunch上周的报道直接用了「SaaSpocalypse」这个词。与此前每一轮SaaS洗牌不同，这次不是新SaaS替代旧SaaS，而是AI直接跳过了软件产品这一层，替用户把活干了。
 
-<p>垂直SaaS工具正在被AI agent蚕食，TechCrunch上周的报道直接用了「SaaSpocalypse」这个词。与此前每一轮SaaS洗牌不同，这次不是新SaaS替代旧SaaS，而是AI直接跳过了软件产品这一层，替用户把活干了。</p>
+产品层的壁垒塌了，劳动层紧跟着松动。哈佛商业评论今年2月对200名科技从业者的调查显示，83%的人说AI增加了而非减少了工作量。代码确实写得更快了，但多数开发者反而花更多时间调试和审查AI生成的代码。写代码变容易的同时，架构决策、调试判断，系统维护这些「不写代码的工程能力」变得更稀缺。15家头部科技公司的初级岗位招聘量两年内下降了25%。工程师的角色正从「写代码的人」变成「做判断的人」。
 
-<p>产品层的壁垒塌了，劳动层紧跟着松动。哈佛商业评论今年2月对200名科技从业者的调查显示，83%的人说AI增加了而非减少了工作量。代码确实写得更快了，但多数开发者反而花更多时间调试和审查AI生成的代码。写代码变容易的同时，架构决策、调试判断，系统维护这些「不写代码的工程能力」变得更稀缺。15家头部科技公司的初级岗位招聘量两年内下降了25%。工程师的角色正从「写代码的人」变成「做判断的人」。</p>
+与此同时，AI应用正在爆发。OpenAI披露ChatGPT周活跃用户数已达9亿，这一数字伴随其1100亿美元融资公告同期发布。AI音乐生成器Suno宣布突破200万付费用户，年经常性收入达3亿美元，成为首个商业成功的AI内容生成工具。
 
-<p>与此同时，AI应用正在爆发。OpenAI披露ChatGPT周活跃用户数已达9亿，这一数字伴随其1100亿美元融资公告同期发布。AI音乐生成器Suno宣布突破200万付费用户，年经常性收入达3亿美元，成为首个商业成功的AI内容生成工具。</p>
-
-<p>商业模式层的裂缝也已经出现。一个在Hacker News上获得433票的项目做了一件事：搭出一个广告驱动的免费AI聊天原型。界面里塞满了各种广告形态和付费墙，十个虚构品牌，但交互逻辑完全跑通。这不是产品发布，是一次预演——当AI聊天的成本持续下降，「免费+广告」的互联网老剧本迟早会被搬上台。</p>
+商业模式层的裂缝也已经出现。一个在Hacker News上获得433票的项目做了一件事：搭出一个广告驱动的免费AI聊天原型。界面里塞满了各种广告形态和付费墙，十个虚构品牌，但交互逻辑完全跑通。这不是产品发布，是一次预演——当AI聊天的成本持续下降，「免费+广告」的互联网老剧本迟早会被搬上台。
 
 <div class="key-tags">
 <span class="key-tag">SaaS公司的护城河从功能转向数据和工作流整合</span>
@@ -83,12 +79,18 @@ categories: ["AI资讯"]
 <a href="https://techcrunch.com/2026/02/27/ai-music-generator-suno-hits-2-million-paid-subscribers-and-300m-in-annual-recurring-revenue/" class="source-item" target="_blank"><span class="source-title">TechCrunch: Suno hits 2M subscribers</span><span class="source-domain">techcrunch.com</span></a>
 <a href="https://techcrunch.com/2026/03/01/saas-in-saas-out-heres-whats-driving-the-saaspocalypse/" class="source-item" target="_blank"><span class="source-title">TechCrunch: SaaSpocalypse</span><span class="source-domain">techcrunch.com</span></a>
 </div>
-</div>
 
 <div class="quick-news-section">
-<div class="quick-news-item"><span class="paper-num">04</span><div class="quick-news-body"><p><strong>OpenClaw超越React成为GitHub最热门项目</strong> 开源AI助手框架OpenClaw在GitHub星标数上超越React，成为最受欢迎的软件项目 <a href="https://www.star-history.com/blog/openclaw-surpasses-react-most-starred-software" class="qn-source" target="_blank"><span class="source-domain">star-history.com</span></a></p></div></div>
-<div class="quick-news-item"><span class="paper-num">05</span><div class="quick-news-body"><p><strong>Motorola宣布与GrapheneOS合作</strong> 推出B2B安全移动解决方案，目标是企业移动设备安全市场 <a href="https://motorolanews.com/motorola-three-new-b2b-solutions-at-mwc-2026/" class="qn-source" target="_blank"><span class="source-domain">motorolanews.com</span></a></p></div></div>
-<div class="quick-news-item"><span class="paper-num">06</span><div class="quick-news-body"><p><strong>/e/OS全面「去谷歌化」移动生态</strong> 开源替代操作系统持续获得关注，为隐私优先用户提供选择 <a href="https://e.foundation/e-os/" class="qn-source" target="_blank"><span class="source-domain">e.foundation</span></a></p></div></div>
-<div class="quick-news-item"><span class="paper-num">07</span><div class="quick-news-body"><p><strong>Microsoft封禁「Microslop」一词</strong> 在Discord服务器中禁止该词，引发反弹后锁定服务器 <a href="https://www.windowslatest.com/2026/03/02/microsoft-gets-tired-of-microslop-bans-the-word-on-its-discord-then-locks-the-server-after-backlash/" class="qn-source" target="_blank"><span class="source-domain">windowslatest.com</span></a></p></div></div>
-<div class="quick-news-item"><span class="paper-num">08</span><div class="quick-news-body"><p><strong>Musk在诉讼证词中称「没人因为Grok自杀」</strong> Musk声称xAI在安全性上优于ChatGPT，但数月后Grok在X平台批量生成未经同意的裸体图像 <a href="https://techcrunch.com/2026/02/27/musk-bashes-openai-in-deposition-saying-nobody-committed-suicide-because-of-grok/" class="qn-source" target="_blank"><span class="source-domain">techcrunch.com</span></a></p></div></div>
+<div class="quick-news-item"><span class="paper-num">04</span><div class="quick-news-body"><p><strong>OpenClaw超越React成为GitHub最热门项目</strong> 开源AI助手框架OpenClaw在GitHub星标数上超越React，成为最受欢迎的软件项目 <a href="https://www.star-history.com/blog/openclaw-surpasses-react-most-starred-software" class="qn-source">star-history.com</a></p></div></div>
+<div class="quick-news-item"><span class="paper-num">05</span><div class="quick-news-body"><p><strong>Motorola宣布与GrapheneOS合作</strong> 推出B2B安全移动解决方案，目标是企业移动设备安全市场 <a href="https://motorolanews.com/motorola-three-new-b2b-solutions-at-mwc-2026/" class="qn-source">motorolanews.com</a></p></div></div>
+<div class="quick-news-item"><span class="paper-num">06</span><div class="quick-news-body"><p><strong>/e/OS全面「去谷歌化」移动生态</strong> 开源替代操作系统持续获得关注，为隐私优先用户提供选择 <a href="https://e.foundation/e-os/" class="qn-source">e.foundation</a></p></div></div>
+<div class="quick-news-item"><span class="paper-num">07</span><div class="quick-news-body"><p><strong>Microsoft封禁「Microslop」一词</strong> 在Discord服务器中禁止该词，引发反弹后锁定服务器 <a href="https://www.windowslatest.com/2026/03/02/microsoft-gets-tired-of-microslop-bans-the-word-on-its-discord-then-locks-the-server-after-backlash/" class="qn-source">windowslatest.com</a></p></div></div>
+<div class="quick-news-item"><span class="paper-num">08</span><div class="quick-news-body"><p><strong>Musk在诉讼证词中称「没人因为Grok自杀」</strong> Musk声称xAI在安全性上优于ChatGPT，但数月后Grok在X平台批量生成未经同意的裸体图像 <a href="https://techcrunch.com/2026/02/27/musk-bashes-openai-in-deposition-saying-nobody-committed-suicide-because-of-grok/" class="qn-source">techcrunch.com</a></p></div></div>
+<div class="quick-news-item"><span class="paper-num">09</span><div class="quick-news-body"><p><strong>AI基础设施投资进入千亿美元量级</strong> TechCrunch汇总当前最大规模AI基础设施项目，涉及Meta、Oracle、微软、Google和OpenAI <a href="https://techcrunch.com/2026/02/28/billion-dollar-infrastructure-deals-ai-boom-data-centers-openai-oracle-nvidia-microsoft-google-meta/" class="qn-source">techcrunch.com</a></p></div></div>
+<div class="quick-news-item"><span class="paper-num">10</span><div class="quick-news-body"><p><strong>MCP Server将Claude Code上下文消耗降低98%</strong> 开发者发布MCP server，通过优化上下文管理策略大幅减少Claude Code的上下文消耗 <a href="https://mksg.lu/blog/context-mode" class="qn-source">mksg.lu</a></p></div></div>
+<div class="quick-news-item"><span class="paper-num">11</span><div class="quick-news-body"><p><strong>Simon Willison用HTTP Range Request构建Unicode查询工具</strong> 在手机上用Claude构建原型，实现快速Unicode字符查询 <a href="https://simonwillison.net/2026/Feb/27/unicode-explorer/" class="qn-source">simonwillison.net</a></p></div></div>
 </div>
+
+---
+
+*来源：TechCrunch、The Verge、Wired、Simon Willison、Hacker News - 英文一手信源，如实呈现*

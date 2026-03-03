@@ -1,70 +1,11 @@
-<header class="site-header">
-  <nav class="site-nav">
-    <a href="/" class="site-title">{{ .Site.Title }}</a>
-    
-    <ul class="nav-links">
-      {{ range .Site.Menus.main }}
-      <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-      {{ end }}
-    </ul>
-  </nav>
-</header>
+<nav class="site-nav">
+  <div class="nav-brand">
+    <a href="/" class="nav-title">{{ .Site.Title }}</a>
+  </div>
 
-<style>
-.site-header {
-  padding: 2.5rem 0 2rem;
-  margin-bottom: 1rem;
-}
-
-.site-nav {
-  max-width: 660px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
-.site-title {
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: #e0e0e0;
-  text-decoration: none;
-  letter-spacing: -0.3px;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.25rem;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li {
-  margin: 0;
-}
-
-.nav-links a {
-  color: #888;
-  text-decoration: none;
-  font-size: 0.95rem;
-}
-
-.nav-links a:hover {
-  color: #fff;
-}
-
-@media (max-width: 768px) {
-  .site-nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.6rem;
-  }
-  
-  .nav-links {
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-}
-</style>
+  <ul class="nav-links">
+    {{ range .Site.Menus.main }}
+    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+    {{ end }}
+  </ul>
+</nav>

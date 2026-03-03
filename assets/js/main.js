@@ -41,3 +41,25 @@ document.addEventListener('DOMContentLoaded', function() {
     el.textContent = currentYear;
   });
 });
+
+// 文章卡片点击跳转
+document.addEventListener('DOMContentLoaded', function() {
+  const articleCards = document.querySelectorAll('.article-card[data-href]');
+
+  articleCards.forEach(function(card) {
+    card.addEventListener('click', function(e) {
+      // 如果点击的是链接，让链接自己处理
+      if (e.target.tagName === 'A' || e.target.closest('a')) {
+        return;
+      }
+
+      const href = this.getAttribute('data-href');
+      if (href) {
+        window.location.href = href;
+      }
+    });
+
+    // 添加指针样式
+    card.style.cursor = 'pointer';
+  });
+});

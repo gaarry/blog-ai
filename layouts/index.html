@@ -1,33 +1,45 @@
 {{ define "main" }}
-<div class="container">
-  <section class="posts-list">
-    {{ range (.Paginator 10).Pages }}
-    {{ if eq .Section "posts" }}
-    <article class="post-item">
-      <div class="post-meta">
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-      </div>
-      <h1 class="post-title">
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
-      </h1>
-      <div class="post-excerpt">{{ .Description }}</div>
-      {{ if .Params.tags }}
-      <div class="post-tags-inline">
-        {{ range $index, $tag := .Params.tags }}
-        {{ if gt $index 0 }} {{ end }}<a href="/tags/{{ $tag | urlize }}/" class="tag-link">#{{ $tag }}</a>
-        {{ end }}
-      </div>
-      {{ end }}
-      <a href="{{ .Permalink }}" class="read-more">Continue Reading →</a>
-    </article>
-    {{ end }}
-    {{ end }}
-    
-    {{- if .Paginator.HasNext }}
-    <div class="pagination">
-      <a href="{{ .Paginator.Next.URL }}">Older Posts →</a>
-    </div>
-    {{- end }}
-  </section>
+<div class="page-header">
+  <h1 class="page-subtitle">{{ .Site.Params.subtitle | default "英文一手信源，如实呈现" }}</h1>
+  <p class="page-tagline">{{ .Site.Params.tagline | default "不炸裂，不夸张，不接商单" }}</p>
 </div>
+
+<ul class="article-list">
+  {{ range (.Paginator 10).Pages }}
+  {{ if eq .Section "posts" }}
+  <li class="article-card" data-href="{{ .Permalink }}">
+    <a href="{{ .Permalink }}" class="card-link">
+      <div class="card-header">
+        <span class="card-date">{{ .Date.Format "2006年1月2日" }}</span>
+      </div>
+
+      {{ if .Params.description }}
+      <ol class="card-numbered">
+        {{ $items := split .Params.description "；" }}
+        {{ range $index, $item := $items }}
+        {{ if $item }}
+        <li{{ if eq $index 0 }} class="lead"{{ end }}>
+          <span class="num">{{ printf "%02d" (add $index 1) }}</span>
+          {{ $item | strings.TrimSuffix "；" }}
+        </li>
+        {{ end }}
+        {{ end }}
+      </ol>
+      {{ else }}
+      <div class="card-excerpt">{{ .Summary }}</div>
+      {{ end }}
+    </a>
+    {{ if .Params.source_count }}
+    <a class="card-stat" href="{{ .Permalink }}#sources">从{{ .Params.source_count }}条资讯中筛选</a>
+    {{ end }}
+  </li>
+  {{ end }}
+  {{ end }}
+</ul>
+
+{{ if .Paginator.HasNext }}
+<p class="view-all">
+  <a href="{{ .Paginator.Next.URL }}">查看更多 →</a>
+</p>
+{{ end }}
 {{ end }}

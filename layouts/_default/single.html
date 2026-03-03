@@ -1,48 +1,49 @@
 {{ define "main" }}
-<div class="container">
-  <article class="post-content">
-    <header class="post-header">
-      <div class="post-meta">
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-        {{ if .ReadingTime }}
-        <span class="reading-time">{{ .ReadingTime }} min read</span>
-        {{ end }}
-      </div>
-      <h1 class="post-title">{{ .Title }}</h1>
-      
-      {{ if or .Params.description }}
-      <div class="section-overview">
-        <ul>
-        {{ range $i, $line := (split .Params.description "；") }}
-          {{ if $line }}<li>{{ $line | strings.TrimSuffix "；" }}</li>{{ end }}
-        {{ end }}
-        </ul>
-      </div>
-      {{ end }}
-      
-      {{ if .Params.tags }}
-      <div class="post-tags-inline">
-        {{ range $index, $tag := .Params.tags }}
-        {{ if gt $index 0 }} · {{ end }}<a href="/tags/{{ $tag | urlize }}/" class="tag-inline">#{{ $tag }}</a>
-        {{ end }}
-      </div>
-      {{ end }}
-    </header>
-    
-    <div class="post-body">
-      {{ .Content }}
-    </div>
-    
-    {{ if or .PrevInSection .NextInSection }}
-    <footer class="post-footer">
-      {{ if .PrevInSection }}
-      <a href="{{ .PrevInSection.Permalink }}">← {{ .PrevInSection.Title }}</a>
-      {{ end }}
-      {{ if .NextInSection }}
-      <a href="{{ .NextInSection.Permalink }}">{{ .NextInSection.Title }} →</a>
-      {{ end }}
-    </footer>
+<header>
+  <p class="article-meta">
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年1月2日" }}</time>
+  </p>
+  <h1>{{ .Title }}</h1>
+
+  {{ if .Params.description }}
+  <ul class="section-overview">
+    {{ range $i, $line := (split .Params.description "；") }}
+    {{ if $line }}<li>{{ $line | strings.TrimSuffix "；" }}</li>{{ end }}
     {{ end }}
-  </article>
+  </ul>
+  {{ end }}
+</header>
+
+<main>
+  {{ .Content }}
+</main>
+
+{{ if or .PrevInSection .NextInSection }}
+<div class="share-bar">
+  <span class="share-label">分享</span>
+  <button class="share-btn share-copy" title="复制链接">
+    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+    复制链接
+  </button>
 </div>
+
+<nav class="related-section" aria-label="继续阅读">
+  <h2>继续阅读</h2>
+  <div class="related-grid">
+    {{ if .NextInSection }}
+    <a class="related-card" href="{{ .NextInSection.Permalink }}">
+      <span class="related-card-date">{{ .NextInSection.Date.Format "2006年1月2日" }}</span>
+      <span class="related-card-title">{{ .NextInSection.Title }}</span>
+    </a>
+    {{ end }}
+    {{ if .PrevInSection }}
+    <a class="related-card" href="{{ .PrevInSection.Permalink }}">
+      <span class="related-card-date">{{ .PrevInSection.Date.Format "2006年1月2日" }}</span>
+      <span class="related-card-title">{{ .PrevInSection.Title }}</span>
+    </a>
+    {{ end }}
+  </div>
+  <p class="related-archive"><a href="/archive/">查看全部存档 &rarr;</a></p>
+</nav>
+{{ end }}
 {{ end }}

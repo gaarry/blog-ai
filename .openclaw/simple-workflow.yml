@@ -1,0 +1,87 @@
+# OpenClaw 简化工作流 - 可直接执行版本
+# 使用 Python 脚本 + Claude API 实现核心功能
+
+name: ai-digest-simple
+version: 1.0.0
+description: 简化的 AI 资讯生成工作流（可直接执行）
+
+# 环境变量
+env:
+  REPO_PATH: .
+  DATA_DIR: data
+  CONTENT_DIR: content/posts
+  SCRIPTS_DIR: scripts
+
+# 工作流步骤
+steps:
+  # 步骤 1: 使用示例数据（实际部署时替换为真实采集）
+  - name: prepare_data
+    description: 准备示例数据用于测试
+    command: |
+      echo "📦 使用示例数据..."
+      cp ${DATA_DIR}/examples/sources_raw.example.json ${DATA_DIR}/sources_raw.json
+      cp ${DATA_DIR}/examples/sources_with_engagement.example.json ${DATA_DIR}/sources_with_engagement.json
+      echo "✅ 数据准备完成"
+
+  # 步骤 2: 验证数据格式
+  - name: validate_input
+    description: 验证输入数据格式
+    command: |
+      python3 ${SCRIPTS_DIR}/validate_data.py
+    on_error: fail
+
+  # 步骤 3: 评分处理
+  - name: score_articles
+    description: 对文章进行多维度评分
+    command: |
+      python3 ${SCRIPTS_DIR}/process_sources.py
+    on_error: fail
+
+  # 步骤 4: 主题选择
+  - name: select_topics
+    description: 选择 3 个深度主题 + 5 个快讯
+    command: |
+      python3 ${SCRIPTS_DIR}/select_topics.py
+    on_error: fail
+
+  # 步骤 5: 生成文章（使用 Claude API）
+  - name: generate_article
+    description: 使用 Claude API 生成文章
+    command: |
+      python3 ${SCRIPTS_DIR}/generate_article.py
+    env:
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
+    on_error: fail
+
+  # 步骤 6: 质量检查
+  - name: quality_check
+    description: 检查生成内容质量
+    command: |
+      python3 ${SCRIPTS_DIR}/quality_check.py
+    on_error: warn
+
+  # 步骤 7: Git 提交（可选）
+  - name: git_commit
+    description: 提交到 Git 仓库
+    command: |
+      git add ${CONTENT_DIR}/*.md
+      git commit -m "Add: AI资讯简报 $(date +%Y-%m-%d)"
+    on_error: warn
+    skip_if: ${DRY_RUN}
+
+  # 步骤 8: Git 推送（可选）
+  - name: git_push
+    description: 推送到远程仓库
+    command: |
+      git push origin main
+    on_error: warn
+    skip_if: ${DRY_RUN}
+
+# 错误处理
+on_failure:
+  - echo "❌ 工作流执行失败"
+  - cat logs/error.log
+
+on_success:
+  - echo "✅ 工作流执行成功"
+  - ls -lh ${CONTENT_DIR}/*.md

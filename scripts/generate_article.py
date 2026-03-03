@@ -9,7 +9,10 @@ import os
 import sys
 from datetime import date
 from pathlib import Path
-from anthropic import Anthropic
+
+# Only import anthropic if not in DRY_RUN mode
+if os.getenv('DRY_RUN') != 'true':
+    from anthropic import Anthropic
 
 def load_system_prompt():
     """Load system prompt from file"""
@@ -110,12 +113,19 @@ def main():
     data_dir = base_dir / 'data'
     content_dir = base_dir / 'content' / 'posts'
 
-    # Check API key
+    # Check API key (skip in DRY_RUN mode)
     api_key = os.getenv('ANTHROPIC_API_KEY')
-    if not api_key:
+    dry_run = os.getenv('DRY_RUN') == 'true'
+
+    if not api_key and not dry_run:
         print("❌ 错误: 未设置 ANTHROPIC_API_KEY 环境变量")
         print("请运行: export ANTHROPIC_API_KEY='your-api-key'")
         sys.exit(1)
+
+    if dry_run:
+        print("⚠️  DRY_RUN 模式: 跳过文章生成")
+        print("✅ 如需生成文章，请设置 ANTHROPIC_API_KEY 并移除 DRY_RUN")
+        sys.exit(0)
 
     # Load selected topics
     topics_file = data_dir / 'selected_topics.json'

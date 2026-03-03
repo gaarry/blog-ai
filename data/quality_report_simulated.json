@@ -1,0 +1,76 @@
+{
+  "date": "2026-03-03",
+  "article_file": "content/posts/2026-03-03-ai-digest-simulated.md",
+  "checks": [
+    {
+      "check": "banned_words",
+      "status": "pass",
+      "message": "未发现禁用词汇",
+      "details": []
+    },
+    {
+      "check": "html_structure",
+      "status": "pass",
+      "message": "HTML 结构完整",
+      "details": {
+        "article_sections": 3,
+        "quick_news_items": 5,
+        "key_tags": 3,
+        "sources_lists": 3
+      }
+    },
+    {
+      "check": "link_validity",
+      "status": "pass",
+      "message": "所有链接格式正确",
+      "details": {
+        "total_links": 12,
+        "valid_links": 12,
+        "invalid_links": 0
+      }
+    },
+    {
+      "check": "source_count",
+      "status": "pass",
+      "message": "来源数量充足",
+      "details": {
+        "deep_articles_sources": 7,
+        "quick_news_sources": 5,
+        "average_sources_per_article": 2.3
+      }
+    },
+    {
+      "check": "article_count",
+      "status": "pass",
+      "message": "文章数量正确",
+      "details": {
+        "deep_articles": 3,
+        "quick_news": 5
+      }
+    },
+    {
+      "check": "front_matter",
+      "status": "pass",
+      "message": "Front Matter 完整",
+      "details": {
+        "has_title": true,
+        "has_date": true,
+        "has_description": true,
+        "has_tags": true
+      }
+    }
+  ],
+  "score": 100,
+  "grade": "优秀",
+  "all_passed": true,
+  "recommendations": [
+    "质量检查全部通过，可以发布"
+  ],
+  "checked_at": "2026-03-03T10:45:00+08:00",
+  "execution_summary": {
+    "total_checks": 6,
+    "passed": 6,
+    "warnings": 0,
+    "failures": 0
+  }
+}

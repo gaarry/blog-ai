@@ -1,0 +1,124 @@
+# AI 资讯速览 - 信源列表
+
+# 说明：
+# - 仅使用英文一手信源
+# - 优先级：官方博客 > 技术媒体 > 开发者社区
+# - 格式：名称 | URL | RSS Feed (可选)
+
+## 1. 官方博客（最高优先级）
+
+OpenAI Blog | https://openai.com/blog/ | https://openai.com/blog/rss.xml
+Anthropic News | https://www.anthropic.com/news |
+Google AI Blog | https://ai.googleblog.com/ | https://ai.googleblog.com/atom.xml
+Meta AI Blog | https://ai.meta.com/blog/ | https://ai.meta.com/blog/rss/
+DeepMind Blog | https://deepmind.google/discover/blog/ |
+Microsoft AI Blog | https://blogs.microsoft.com/ai/ | https://blogs.microsoft.com/ai/feed/
+Stability AI Blog | https://stability.ai/news |
+Cohere Blog | https://cohere.com/blog |
+Hugging Face Blog | https://huggingface.co/blog |
+
+## 2. 技术媒体（高优先级）
+
+TechCrunch AI | https://techcrunch.com/category/artificial-intelligence/ | https://techcrunch.com/category/artificial-intelligence/feed/
+The Verge AI | https://www.theverge.com/ai-artificial-intelligence | https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+Ars Technica AI | https://arstechnica.com/tag/artificial-intelligence/ | https://feeds.arstechnica.com/arstechnica/technology-lab
+MIT Technology Review AI | https://www.technologyreview.com/topic/artificial-intelligence/ |
+VentureBeat AI | https://venturebeat.com/category/ai/ | https://venturebeat.com/category/ai/feed/
+Wired AI | https://www.wired.com/tag/artificial-intelligence/ | https://www.wired.com/feed/tag/ai/latest/rss
+
+## 3. 学术和研究（中优先级）
+
+arXiv cs.AI | https://arxiv.org/list/cs.AI/recent | http://export.arxiv.org/rss/cs.AI
+arXiv cs.CL | https://arxiv.org/list/cs.CL/recent | http://export.arxiv.org/rss/cs.CL
+arXiv cs.LG | https://arxiv.org/list/cs.LG/recent | http://export.arxiv.org/rss/cs.LG
+Papers with Code | https://paperswithcode.com/ |
+Hugging Face Papers | https://huggingface.co/papers |
+
+## 4. 开发者社区（参考）
+
+Hacker News | https://news.ycombinator.com/ |
+Reddit r/MachineLearning | https://www.reddit.com/r/MachineLearning/ | https://www.reddit.com/r/MachineLearning/.rss
+Reddit r/artificial | https://www.reddit.com/r/artificial/ | https://www.reddit.com/r/artificial/.rss
+GitHub Trending AI | https://github.com/trending/jupyter-notebook?since=daily |
+
+## 5. 行业分析（补充）
+
+Benedict Evans | https://www.ben-evans.com/ |
+Stratechery | https://stratechery.com/ |
+The Information AI | https://www.theinformation.com/ai |
+
+## 6. 开源项目（关注）
+
+LangChain Blog | https://blog.langchain.dev/ |
+LlamaIndex Blog | https://www.llamaindex.ai/blog |
+AutoGPT News | https://news.agpt.co/ |
+
+---
+
+# 采集策略
+
+## 优先级排序
+1. 官方博客（100% 采集）
+2. 技术媒体（80% 采集）
+3. 学术论文（50% 采集，仅重要论文）
+4. 开发者社区（30% 采集，仅高分帖子）
+
+## 采集频率
+- 官方博客：每次都采集
+- 技术媒体：每次都采集
+- 学术论文：每天采集一次
+- 开发者社区：每天采集一次
+
+## 社区参与度采集
+- Hacker News：使用 HN API 获取评分和评论数
+- Reddit：使用 Reddit API 获取投票和评论数
+- GitHub：使用 GitHub API 获取 Star 数
+
+## 时间范围
+- 优先采集最近 24 小时的内容
+- 最多回溯 48 小时
+
+---
+
+# 使用方法
+
+AI Agent 应该：
+
+1. **读取这个文件**，获取所有信源 URL
+2. **按优先级顺序**采集每个信源
+3. **使用 WebFetch 工具**获取页面内容
+4. **提取关键信息**：
+   - 标题
+   - 摘要/简介
+   - 链接
+   - 发布时间
+   - 作者（如果有）
+5. **保存到 data/sources_raw.json**
+
+示例代码（伪代码）：
+
+```python
+sources = read_file("reference/sources-list.txt")
+articles = []
+
+for source in sources:
+    content = web_fetch(source.url)
+    extracted = extract_articles(content)
+    articles.extend(extracted)
+
+save_json("data/sources_raw.json", articles)
+```
+
+---
+
+# 注意事项
+
+1. **仅使用英文信源**，不采集中文媒体
+2. **尊重 robots.txt** 和 rate limiting
+3. **缓存结果**，避免重复采集
+4. **记录失败的信源**，便于后续排查
+5. **验证链接有效性**，过滤失效链接
+
+---
+
+最后更新：2026-03-03

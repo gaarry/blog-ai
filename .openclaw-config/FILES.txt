@@ -1,0 +1,90 @@
+OpenClaw 配置包 - 文件清单
+==============================
+
+总计: 20 个文件
+
+核心配置 (1)
+-----------
+✅ task.yml                                OpenClaw 任务配置（最重要）
+
+方法论文档 (3)
+-------------
+✅ METHODOLOGY.md                          方法论和评分算法（70KB）
+✅ WRITING_GUIDE.md                        写作规范和格式要求（8.6KB）
+✅ QUALITY_STANDARDS.md                    质量标准和检查规则（9KB）
+
+模板 (1)
+--------
+✅ templates/article-template.md           文章模板和 HTML 结构
+
+参考文件 (2)
+-----------
+✅ reference/sources-list.txt              20+ 英文信源列表
+✅ reference/banned-words.txt              禁用词汇列表
+
+数据结构 (8)
+-----------
+Schema (4):
+✅ data-schemas/sources_raw.schema.json
+✅ data-schemas/sources_with_engagement.schema.json
+✅ data-schemas/scored_sources.schema.json
+✅ data-schemas/selected_topics.schema.json
+
+Examples (4):
+✅ data-examples/sources_raw.example.json
+✅ data-examples/sources_with_engagement.example.json
+✅ data-examples/scored_sources.example.json
+✅ data-examples/selected_topics.example.json
+
+文档 (5)
+--------
+✅ START_HERE.md                           从这里开始（入口）
+✅ README.md                               配置包总览（6.6KB）
+✅ QUICKSTART.md                           5 分钟快速开始（9KB）
+✅ DEPLOYMENT_CHECKLIST.md                 部署检查清单（8.1KB）
+✅ PACKAGE_SUMMARY.md                      配置包总结（7.3KB）
+
+文件清单 (1)
+-----------
+✅ FILES.txt                               本文件
+
+使用说明
+========
+
+1. 入口文档
+   - START_HERE.md                         ⭐ 从这里开始
+
+2. 快速开始
+   - QUICKSTART.md                         ⭐ 5 分钟上手
+
+3. 完整部署
+   - DEPLOYMENT_CHECKLIST.md               ⭐ 部署清单
+
+4. 详细说明
+   - README.md                             完整说明
+   - PACKAGE_SUMMARY.md                    配置总结
+
+5. 核心配置
+   - task.yml                              ⭐ 任务配置
+   - METHODOLOGY.md                        ⭐ 方法论
+   - WRITING_GUIDE.md                      ⭐ 写作规范
+   - QUALITY_STANDARDS.md                  ⭐ 质量标准
+
+文件大小统计
+===========
+
+总大小: ~150KB
+
+- 文档: ~60KB
+- 配置: ~10KB
+- 数据结构: ~40KB
+- 数据示例: ~40KB
+
+版本信息
+========
+
+版本: 2.0.0
+日期: 2026-03-03
+状态: ✅ 生产就绪
+维护者: Gary Yao
+

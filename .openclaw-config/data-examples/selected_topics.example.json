@@ -1,0 +1,180 @@
+{
+  "metadata": {
+    "selected_at": "2026-03-03T11:00:00+08:00",
+    "date": "2026-03-03",
+    "total_candidates": 156,
+    "selection_criteria": {
+      "min_score": 70,
+      "diversity_enabled": true,
+      "duplicate_check_days": 7
+    }
+  },
+  "deep_articles": [
+    {
+      "theme": "OpenAI与五角大楼合作争议",
+      "category": "policy_regulation",
+      "suggested_title": "OpenAI向五角大楼让步，交出的恰是Anthropic的底线",
+      "sources": [
+        {
+          "id": "openai_blog_20260303_001",
+          "url": "https://openai.com/blog/partnership-with-department-of-defense",
+          "title": "Our agreement with the Department of Defense",
+          "summary": "OpenAI announces partnership with DoD for deploying AI models on classified networks.",
+          "content": "We're announcing our agreement with the U.S. Department of Defense to deploy our AI models on classified networks. This partnership includes three key safety principles:\n\n1. No mass surveillance of civilians\n2. No autonomous weapons without human oversight\n3. No social credit scoring systems\n\nThese principles are reflected in the contract and align with DoD policies. We maintain full control over our safety stack and deploy only through cloud infrastructure, not edge systems that could be mounted on weapons platforms.\n\nThe agreement was reached quickly after our competitor declined to work with the government. We believe responsible AI companies should engage with democratic institutions rather than refuse to participate in important national security applications.",
+          "domain": "openai.com",
+          "source": "OpenAI Blog",
+          "published": "2026-03-02T15:30:00Z",
+          "score": 95.2
+        },
+        {
+          "id": "theverge_20260303_003",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/2026/3/2/anthropic-banned-openai-wins-pentagon",
+          "title": "How OpenAI caved to the Pentagon on AI surveillance",
+          "summary": "Analysis of the differences between OpenAI's and Anthropic's approaches.",
+          "content": "The contrast between OpenAI and Anthropic's responses to Pentagon demands reveals a fundamental split in how AI companies approach military work.\n\nAnthropic insisted on hard contractual prohibitions that would prevent the government from using its models for surveillance or autonomous weapons, regardless of how the government interprets existing law. The Pentagon demanded unrestricted use for 'lawful purposes,' and when Anthropic refused, Defense Secretary Hegseth designated it a supply chain risk.\n\nOpenAI took a different path. Its contract allows use for any 'lawful purpose,' relying on existing government policies rather than independent contractual restrictions. Legal experts note this gives the company no independent authority to prevent specific uses.\n\nThe distinction matters because 'lawful' is determined by the government itself. The NSA's mass surveillance programs revealed by Edward Snowden were all deemed lawful by internal reviews before being exposed.",
+          "domain": "theverge.com",
+          "source": "The Verge",
+          "published": "2026-03-02T20:15:00Z",
+          "score": 89.4
+        },
+        {
+          "id": "techcrunch_20260303_002",
+          "url": "https://techcrunch.com/2026/03/02/openai-pentagon-deal-raises-questions",
+          "title": "OpenAI's Pentagon deal raises questions about AI oversight",
+          "summary": "Tech industry experts question the enforceability of stated safety principles.",
+          "content": "Sam Altman's social media responses to questions about the Pentagon deal revealed a company still working out its position on military AI.\n\nWhen asked about surveillance safeguards, Altman emphasized that OpenAI's principles match Anthropic's. But procurement law expert Steven Schooner at George Washington University notes the contract itself doesn't grant OpenAI veto power over government applications.\n\nThe agreement was announced just hours after Anthropic was banned, with Altman calling the negotiation 'admittedly rushed.' He later posted that the Pentagon should 'offer the same terms to all AI companies,' though Anthropic had already been excluded for refusing those exact terms.\n\nTechCrunch's analysis: No one in the industry has figured out a workable framework for military AI partnerships. OpenAI and Anthropic represent two approaches—engage and influence versus refuse and be excluded—but neither provides a clear path forward.",
+          "domain": "techcrunch.com",
+          "source": "TechCrunch",
+          "published": "2026-03-02T18:45:00Z",
+          "score": 91.7
+        },
+        {
+          "id": "mittr_20260303_004",
+          "url": "https://www.technologyreview.com/2026/03/02/ai-companies-military-contracts",
+          "title": "No one has a good plan for how AI companies should work with the government",
+          "summary": "The lack of industry consensus on military AI partnerships.",
+          "content": "The rapid escalation from negotiation to federal ban in less than 24 hours shows how unprepared both government and industry are for these conversations.\n\nAnthropic's position: absolute contractual prohibitions on surveillance and autonomous weapons, regardless of legal interpretations. OpenAI's position: align with existing law and policy, maintain technical control, trust the democratic process.\n\nBoth companies claim nearly identical 'red lines,' but only one was willing to sign. The difference isn't in principles but in enforcement mechanisms—hard contract terms versus soft policy alignment.\n\nExperts interviewed by MIT Technology Review couldn't point to any company that has successfully navigated this. Defense contractors typically have no say in how their products are used. Tech companies want unprecedented oversight. The government wants both cutting-edge capabilities and unrestricted deployment authority.\n\nUntil the industry develops a consensus framework, we'll continue seeing these ad-hoc negotiations that end in either compromise or exclusion.",
+          "domain": "technologyreview.com",
+          "source": "MIT Technology Review",
+          "published": "2026-03-02T16:20:00Z",
+          "score": 87.3
+        }
+      ],
+      "key_points": [
+        "OpenAI签署允许'合法用途'的合同，Anthropic拒绝并被封禁",
+        "两家公司声称相同红线，但法律约束力完全不同",
+        "行业尚无AI军事合作的可行框架"
+      ]
+    },
+    {
+      "theme": "反AI抗议与版权判例",
+      "category": "safety_ethics",
+      "suggested_title": "最高法院驳回AI版权案的同一个周末，伦敦数百人上街要求「拔掉插头」",
+      "sources": [
+        {
+          "id": "supremecourt_20260303_010",
+          "url": "https://www.theverge.com/policy/2026/3/2/supreme-court-ai-art-copyright",
+          "title": "AI-generated art can't be copyrighted after Supreme Court declines to review",
+          "summary": "Seven-year legal battle ends with court refusal to hear appeal.",
+          "content": "The Supreme Court declined to review a case that would have determined whether AI-generated works can receive copyright protection, effectively ending computer scientist Stephen Thaler's seven-year legal campaign.\n\nThaler created an AI system that autonomously generated artwork, then sought copyright registration. The Copyright Office rejected it, federal courts upheld the rejection, and now the Supreme Court has declined to intervene.\n\nThe ruling leaves intact the principle that copyright requires human authorship. Courts at every level agreed this is a 'bedrock requirement' of copyright law.\n\nThaler also lost a parallel case on AI-invented patents, meaning AI systems currently have no path to intellectual property protection in the U.S.",
+          "domain": "theverge.com",
+          "source": "The Verge",
+          "published": "2026-03-02T09:00:00Z",
+          "score": 82.1
+        },
+        {
+          "id": "protest_20260303_011",
+          "url": "https://www.technologyreview.com/2026/03/02/london-anti-ai-protest",
+          "title": "I checked out one of the biggest anti-AI protests ever",
+          "summary": "Hundreds march through London's tech district demanding AI pause.",
+          "content": "Saturday's march through King's Cross was the largest organized anti-AI demonstration to date. Protesters walked past the UK headquarters of Google DeepMind, Meta, and several AI startups.\n\nOrganizers from PauseAI and Stop AI demanded:\n- Binding citizen assemblies to govern AI deployment\n- Pause on frontier model development until safety is proven\n- Democratic oversight of AI research\n\nThe protest's timing—the same weekend the Supreme Court ruled against AI copyright—wasn't coincidental. One organizer told MIT Technology Review: 'The courts are saying AI can't be authors. We're saying AI shouldn't be deployed at all until we have democratic control.'\n\nThis represents a shift from industry-focused policy debates to street-level activism. The question is no longer just how to regulate AI, but whether to allow its continued development.",
+          "domain": "technologyreview.com",
+          "source": "MIT Technology Review",
+          "published": "2026-03-02T14:30:00Z",
+          "score": 79.8
+        }
+      ],
+      "key_points": [
+        "最高法院拒绝审理AI版权案，封死法律保护路径",
+        "伦敦反AI游行规模创纪录，要求民主监督",
+        "AI同时面对制度否定与公众反弹"
+      ]
+    },
+    {
+      "theme": "Nvidia投资光互联技术",
+      "category": "industry_news",
+      "suggested_title": "Nvidia砸40亿押注光互联，苹果向竞争对手借服务器",
+      "sources": [
+        {
+          "id": "nvidia_20260303_020",
+          "url": "https://techcrunch.com/2026/03/02/nvidia-invests-4b-photonics",
+          "title": "Nvidia invests $4B in photonics startups for next-gen data center interconnects",
+          "summary": "Two $2B investments target optical networking for AI training clusters.",
+          "content": "Nvidia announced $4 billion in investments split between two photonics companies developing optical interconnects for data centers.\n\nThe investments target a bottleneck that's becoming critical as training clusters scale to tens of thousands of GPUs. Current electrical interconnects can't keep up with the data transfer speeds needed between chips.\n\nBoth companies focus on silicon photonics—using light instead of electricity to move data between processors. This isn't about making chips faster; it's about making the connections between chips fast enough to matter.\n\nNvidia's bet: as models get larger and training runs get more distributed, the network becomes the bottleneck. Spending $4B on interconnect technology suggests they see this as existential for future AI scaling.",
+          "domain": "techcrunch.com",
+          "source": "TechCrunch",
+          "published": "2026-03-02T11:00:00Z",
+          "score": 76.4
+        },
+        {
+          "id": "apple_20260303_021",
+          "url": "https://www.theinformation.com/articles/apple-asks-google-to-build-gemini-servers",
+          "title": "Apple asks Google to build custom servers for Gemini-powered Siri",
+          "summary": "New Siri requires Google infrastructure that meets Apple privacy standards.",
+          "content": "Apple has asked Google to construct dedicated server infrastructure for running Gemini models that will power the upgraded Siri announced in January.\n\nThe request reveals Apple's infrastructure gap. The company announced it would use Google's Gemini for Siri's AI capabilities but apparently doesn't have the server capacity—or doesn't want to build it—to run those models internally.\n\nThe servers must meet Apple's privacy requirements, which are stricter than Google's standard cloud offering. This creates an unusual situation: Apple's product running on competitor-built infrastructure under Apple's specifications.\n\nThe deal highlights how AI deployment requires massive specialized infrastructure that even Apple can't quickly spin up.",
+          "domain": "theinformation.com",
+          "source": "The Information",
+          "published": "2026-03-02T13:15:00Z",
+          "score": 74.2
+        }
+      ],
+      "key_points": [
+        "Nvidia投资光互联解决GPU集群瓶颈",
+        "苹果依赖谷歌基础设施运行AI服务",
+        "AI竞争从模型转向基础设施"
+      ]
+    }
+  ],
+  "quick_news": [
+    {
+      "title": "OpenClaw surpasses React as most-starred GitHub project",
+      "url": "https://www.star-history.com/blog/openclaw-surpasses-react",
+      "domain": "star-history.com",
+      "summary": "开源AI助手框架OpenClaw在GitHub星标数上超越React，成为最受欢迎的软件项目",
+      "published": "2026-03-02T08:30:00Z",
+      "score": 71.3
+    },
+    {
+      "title": "Motorola announces partnership with GrapheneOS for B2B security",
+      "url": "https://motorolanews.com/motorola-grapheneos-partnership",
+      "domain": "motorolanews.com",
+      "summary": "摩托罗拉与GrapheneOS合作推出企业安全移动解决方案",
+      "published": "2026-03-02T10:45:00Z",
+      "score": 68.7
+    },
+    {
+      "title": "Microsoft bans word 'Microslop' on Discord, locks server after backlash",
+      "url": "https://www.windowslatest.com/2026/03/02/microsoft-bans-microslop",
+      "domain": "windowslatest.com",
+      "summary": "微软在Discord服务器禁用贬损词汇引发反弹后锁定服务器",
+      "published": "2026-03-02T16:20:00Z",
+      "score": 65.2
+    },
+    {
+      "title": "Musk claims 'nobody committed suicide because of Grok' in OpenAI deposition",
+      "url": "https://techcrunch.com/2026/02/27/musk-grok-suicide-claim",
+      "domain": "techcrunch.com",
+      "summary": "Musk在诉讼证词中声称xAI安全性优于ChatGPT，数月后Grok生成未经同意的裸体图像",
+      "published": "2026-02-27T19:30:00Z",
+      "score": 72.8
+    },
+    {
+      "title": "/e/OS advances 'de-Googled' mobile ecosystem",
+      "url": "https://e.foundation/e-os-update",
+      "domain": "e.foundation",
+      "summary": "开源替代操作系统为隐私优先用户提供完全去谷歌化的移动体验",
+      "published": "2026-03-02T12:00:00Z",
+      "score": 63.5
+    }
+  ]
+}

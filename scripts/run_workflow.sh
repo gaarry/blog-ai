@@ -29,11 +29,13 @@ if ! command -v python3 &> /dev/null; then
     exit 1
 fi
 
-# 检查 API Key
-if [ -z "$ANTHROPIC_API_KEY" ]; then
+# 检查 API Key（DRY_RUN 模式下跳过）
+if [ -z "$ANTHROPIC_API_KEY" ] && [ "$DRY_RUN" != "true" ]; then
     echo -e "${RED}❌ 错误: 未设置 ANTHROPIC_API_KEY 环境变量${NC}"
     echo -e "${YELLOW}请运行: export ANTHROPIC_API_KEY='your-api-key'${NC}"
     exit 1
+elif [ "$DRY_RUN" = "true" ]; then
+    echo -e "${YELLOW}⚠️  DRY_RUN 模式: 将跳过 API 调用${NC}"
 fi
 
 echo -e "${GREEN}✅ 环境检查通过${NC}"

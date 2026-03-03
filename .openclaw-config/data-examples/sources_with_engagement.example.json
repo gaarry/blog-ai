@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "collected_at": "2026-03-03T10:00:00+08:00",
+    "enriched_at": "2026-03-03T10:15:00+08:00",
+    "total_articles": 156,
+    "matched_articles": 87
+  },
+  "sources": [
+    {
+      "id": "openai_blog_20260303_001",
+      "url": "https://openai.com/blog/partnership-with-department-of-defense",
+      "title": "Our agreement with the Department of Defense",
+      "summary": "OpenAI announces partnership with DoD for deploying AI models on classified networks with safety guardrails.",
+      "content": "We're announcing our agreement with the U.S. Department of Defense...",
+      "source": "OpenAI Blog",
+      "domain": "openai.com",
+      "published": "2026-03-02T15:30:00Z",
+      "author": "Sam Altman",
+      "tags": ["partnership", "defense", "safety"],
+      "language": "en",
+      "engagement": {
+        "total_score": 92.5,
+        "hacker_news": {
+          "item_id": 39582341,
+          "score": 847,
+          "comments": 523,
+          "url": "https://news.ycombinator.com/item?id=39582341"
+        },
+        "reddit": {
+          "post_id": "1b3xyz9",
+          "subreddit": "MachineLearning",
+          "upvotes": 3421,
+          "comments": 892,
+          "url": "https://reddit.com/r/MachineLearning/comments/1b3xyz9"
+        }
+      }
+    },
+    {
+      "id": "techcrunch_20260303_002",
+      "url": "https://techcrunch.com/2026/03/02/openai-pentagon-deal-raises-questions",
+      "title": "OpenAI's Pentagon deal raises questions about AI oversight",
+      "summary": "Tech industry experts question the enforceability of OpenAI's stated safety principles.",
+      "content": "Hours after Anthropic was banned from federal contracts...",
+      "source": "TechCrunch",
+      "domain": "techcrunch.com",
+      "published": "2026-03-02T18:45:00Z",
+      "author": "Sarah Chen",
+      "tags": ["openai", "pentagon", "ai-safety"],
+      "language": "en",
+      "engagement": {
+        "total_score": 88.3,
+        "hacker_news": {
+          "item_id": 39582789,
+          "score": 612,
+          "comments": 387,
+          "url": "https://news.ycombinator.com/item?id=39582789"
+        },
+        "reddit": {
+          "post_id": "1b3abc2",
+          "subreddit": "technology",
+          "upvotes": 2156,
+          "comments": 543,
+          "url": "https://reddit.com/r/technology/comments/1b3abc2"
+        }
+      }
+    },
+    {
+      "id": "theverge_20260303_003",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/2026/3/2/anthropic-banned-openai-wins-pentagon",
+      "title": "How OpenAI caved to the Pentagon on AI surveillance",
+      "summary": "Analysis of the differences between OpenAI's and Anthropic's approaches to military AI contracts.",
+      "content": "The contrast between OpenAI and Anthropic's responses...",
+      "source": "The Verge",
+      "domain": "theverge.com",
+      "published": "2026-03-02T20:15:00Z",
+      "author": "James Vincent",
+      "tags": ["openai", "anthropic", "military-ai"],
+      "language": "en",
+      "engagement": {
+        "total_score": 85.7,
+        "hacker_news": {
+          "item_id": 39583124,
+          "score": 534,
+          "comments": 298,
+          "url": "https://news.ycombinator.com/item?id=39583124"
+        },
+        "reddit": {
+          "post_id": "1b3def5",
+          "subreddit": "artificial",
+          "upvotes": 1823,
+          "comments": 421,
+          "url": "https://reddit.com/r/artificial/comments/1b3def5"
+        }
+      }
+    },
+    {
+      "id": "mittr_20260303_004",
+      "url": "https://www.technologyreview.com/2026/03/02/ai-companies-military-contracts",
+      "title": "No one has a good plan for how AI companies should work with the government",
+      "summary": "The OpenAI-Anthropic split highlights the lack of industry consensus.",
+      "content": "The rapid escalation from negotiation to federal ban...",
+      "source": "MIT Technology Review",
+      "domain": "technologyreview.com",
+      "published": "2026-03-02T16:20:00Z",
+      "author": "Will Douglas Heaven",
+      "tags": ["ai-policy", "military", "ethics"],
+      "language": "en",
+      "engagement": {
+        "total_score": 79.2,
+        "hacker_news": {
+          "item_id": 39582567,
+          "score": 423,
+          "comments": 234,
+          "url": "https://news.ycombinator.com/item?id=39582567"
+        },
+        "reddit": {
+          "post_id": "1b3ghi8",
+          "subreddit": "MachineLearning",
+          "upvotes": 1345,
+          "comments": 287,
+          "url": "https://reddit.com/r/MachineLearning/comments/1b3ghi8"
+        }
+      }
+    },
+    {
+      "id": "hn_20260303_005",
+      "url": "https://www.theguardian.com/technology/2026/mar/02/london-anti-ai-protest",
+      "title": "Hundreds march in London demanding pause on frontier AI development",
+      "summary": "Largest anti-AI protest to date calls for citizen assemblies.",
+      "content": "Several hundred protesters marched through London's tech district...",
+      "source": "The Guardian",
+      "domain": "theguardian.com",
+      "published": "2026-03-02T14:30:00Z",
+      "author": "Alex Hern",
+      "tags": ["protest", "ai-regulation", "london"],
+      "language": "en",
+      "engagement": {
+        "total_score": 72.4,
+        "hacker_news": {
+          "item_id": 39581234,
+          "score": 287,
+          "comments": 156,
+          "url": "https://news.ycombinator.com/item?id=39581234"
+        },
+        "reddit": {
+          "post_id": "1b3jkl1",
+          "subreddit": "technology",
+          "upvotes": 987,
+          "comments": 198,
+          "url": "https://reddit.com/r/technology/comments/1b3jkl1"
+        }
+      }
+    }
+  ]
+}

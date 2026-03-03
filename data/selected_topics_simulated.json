@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "selected_at": "2026-03-03T10:30:00+08:00",
+    "date": "2026-03-03",
+    "total_candidates": 12,
+    "selection_criteria": {
+      "deep_articles_min_score": 70,
+      "quick_news_min_score": 50,
+      "diversity_enabled": true
+    }
+  },
+  "deep_articles": [
+    {
+      "theme": "OpenAI 发布 GPT-5，推理能力大幅提升",
+      "category": "model_release",
+      "suggested_title": "OpenAI 发布 GPT-5，推理能力提升 40%",
+      "sources": [
+        {
+          "id": "openai_blog_001",
+          "url": "https://openai.com/blog/gpt-5-announcement",
+          "title": "Introducing GPT-5: Our Most Capable Model Yet",
+          "summary": "OpenAI announces GPT-5 with improved reasoning, multimodal capabilities, and reduced hallucinations.",
+          "content": "Today we're announcing GPT-5, our most capable model to date. GPT-5 represents a significant leap in AI capabilities, with enhanced reasoning, better factual accuracy, and native multimodal understanding. The model shows 40% improvement in complex reasoning tasks and 60% reduction in hallucinations compared to GPT-4.",
+          "domain": "openai.com",
+          "source": "OpenAI Blog",
+          "published": "2026-03-02T15:00:00Z",
+          "score": 92.5
+        },
+        {
+          "id": "techcrunch_001",
+          "url": "https://techcrunch.com/2026/03/02/openai-gpt5-launch",
+          "title": "OpenAI launches GPT-5 with focus on reasoning and safety",
+          "summary": "The new model includes enhanced safety features and improved performance on complex reasoning tasks.",
+          "content": "OpenAI's GPT-5 launch focuses on two key areas: advanced reasoning capabilities and enhanced safety measures. The company has implemented new alignment techniques that reduce harmful outputs while maintaining performance.",
+          "domain": "techcrunch.com",
+          "source": "TechCrunch",
+          "published": "2026-03-02T16:00:00Z",
+          "score": 78.0
+        },
+        {
+          "id": "mit_tr_001",
+          "url": "https://www.technologyreview.com/2026/03/01/ai-reasoning-breakthrough/",
+          "title": "AI reasoning capabilities see unexpected breakthrough",
+          "summary": "Multiple labs report significant improvements in AI reasoning, raising questions about scaling laws.",
+          "content": "Recent model releases from OpenAI, Anthropic, and Google all show unexpected improvements in reasoning capabilities. Researchers suggest we may be entering a new phase of AI development where reasoning emerges from scale.",
+          "domain": "technologyreview.com",
+          "source": "MIT Technology Review",
+          "published": "2026-03-01T14:00:00Z",
+          "score": 72.0
+        }
+      ],
+      "key_points": []
+    },
+    {
+      "theme": "Anthropic Claude 4 在代码生成基准测试中创新高",
+      "category": "ai_agent",
+      "suggested_title": "Anthropic Claude 4 在 SWE-bench 达到 89% 准确率",
+      "sources": [
+        {
+          "id": "anthropic_blog_001",
+          "url": "https://www.anthropic.com/news/claude-4-coding",
+          "title": "Claude 4 Sets New Benchmark in Code Generation",
+          "summary": "Anthropic's Claude 4 achieves 89% on SWE-bench, surpassing previous models in software engineering tasks.",
+          "content": "Claude 4 has achieved 89% on SWE-bench, the industry standard for evaluating AI coding capabilities. This represents a 15-point improvement over Claude 3.5 Sonnet and establishes a new state-of-the-art in autonomous software engineering.",
+          "domain": "anthropic.com",
+          "source": "Anthropic News",
+          "published": "2026-03-02T14:30:00Z",
+          "score": 90.0
+        },
+        {
+          "id": "theverge_001",
+          "url": "https://www.theverge.com/ai/2026/3/2/anthropic-claude-4-coding",
+          "title": "Anthropic's Claude 4 can now write production-ready code",
+          "summary": "New benchmark results show Claude 4 outperforming competitors in real-world coding tasks.",
+          "content": "Anthropic's latest model, Claude 4, has demonstrated remarkable capabilities in writing production-ready code. In tests, the model successfully completed complex software engineering tasks with minimal human intervention.",
+          "domain": "theverge.com",
+          "source": "The Verge",
+          "published": "2026-03-02T15:30:00Z",
+          "score": 75.0
+        }
+      ],
+      "key_points": []
+    },
+    {
+      "theme": "Meta 发布开源模型 Llama 4，性能接近闭源模型",
+      "category": "model_release",
+      "suggested_title": "Meta 发布 Llama 4，4050 亿参数开源模型",
+      "sources": [
+        {
+          "id": "meta_blog_001",
+          "url": "https://ai.meta.com/blog/llama-4-open-source/",
+          "title": "Llama 4: Our Most Capable Open Source Model",
+          "summary": "Meta releases Llama 4 with performance competitive with closed-source models while remaining fully open source.",
+          "content": "Llama 4 represents a major milestone in open source AI. With 405 billion parameters and training on 15 trillion tokens, it achieves performance comparable to GPT-4 while remaining fully open source under the Llama license.",
+          "domain": "ai.meta.com",
+          "source": "Meta AI Blog",
+          "published": "2026-03-01T16:00:00Z",
+          "score": 82.0
+        },
+        {
+          "id": "google_blog_001",
+          "url": "https://blog.google/technology/ai/gemini-2-ultra-launch/",
+          "title": "Gemini 2.0 Ultra: Multimodal AI at Scale",
+          "summary": "Google launches Gemini 2.0 Ultra with native multimodal capabilities across text, image, video, and audio.",
+          "content": "Gemini 2.0 Ultra represents Google's most advanced multimodal AI system. The model can seamlessly process and generate content across text, images, video, and audio, with particular strength in scientific reasoning and mathematical problem-solving.",
+          "domain": "blog.google",
+          "source": "Google Blog",
+          "published": "2026-03-01T18:00:00Z",
+          "score": 85.0
+        }
+      ],
+      "key_points": []
+    }
+  ],
+  "quick_news": [
+    {
+      "title": "Stable Diffusion 4.0 发布，图像生成更逼真",
+      "url": "https://stability.ai/news/stable-diffusion-4",
+      "domain": "stability.ai",
+      "summary": "Stability AI 发布 SD 4.0，在照片级真实感和文本渲染方面有重大改进",
+      "published": "2026-03-02T11:00:00Z",
+      "score": 68.0
+    },
+    {
+      "title": "开源 AI Agent 框架 24 小时获 1 万 GitHub 星标",
+      "url": "https://news.ycombinator.com/item?id=39900001",
+      "domain": "news.ycombinator.com",
+      "summary": "AgentFlow 框架简化了 AI Agent 创建，内置规划、记忆和工具使用功能",
+      "published": "2026-03-02T08:00:00Z",
+      "score": 65.0
+    },
+    {
+      "title": "微软 Copilot 企业版推出新功能和定价",
+      "url": "https://blogs.microsoft.com/ai/copilot-enterprise-updates/",
+      "domain": "blogs.microsoft.com",
+      "summary": "微软扩展 Copilot 企业版功能，包括自定义模型训练和高级安全控制，定价每用户每月 30 美元起",
+      "published": "2026-03-02T13:00:00Z",
+      "score": 62.0
+    },
+    {
+      "title": "欧盟 AI 法案开始执行合规审计",
+      "url": "https://ec.europa.eu/ai-act-enforcement-2026",
+      "domain": "ec.europa.eu",
+      "summary": "欧盟开始对主要 AI 公司进行初步合规审计，企业有六个月时间证明符合透明度、安全性和公平性要求",
+      "published": "2026-03-01T10:00:00Z",
+      "score": 58.0
+    },
+    {
+      "title": "新研究提出宪法 AI 训练方法",
+      "url": "https://arxiv.org/abs/2603.00001",
+      "domain": "arxiv.org",
+      "summary": "研究人员提出通过自我批评和修订训练 AI 系统遵循宪法原则，减少人类反馈需求",
+      "published": "2026-03-01T09:00:00Z",
+      "score": 55.0
+    }
+  ]
+}

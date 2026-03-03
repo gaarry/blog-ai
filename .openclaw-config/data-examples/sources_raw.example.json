@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "collected_at": "2026-03-03T10:00:00+08:00",
+    "time_range": "24h",
+    "total_sources": 22,
+    "total_articles": 156
+  },
+  "sources": [
+    {
+      "id": "openai_blog_20260303_001",
+      "url": "https://openai.com/blog/partnership-with-department-of-defense",
+      "title": "Our agreement with the Department of Defense",
+      "summary": "OpenAI announces partnership with DoD for deploying AI models on classified networks with safety guardrails.",
+      "content": "We're announcing our agreement with the U.S. Department of Defense to deploy our AI models on classified networks. This partnership includes three key safety principles...\n\n[Full article content would be here]",
+      "source": "OpenAI Blog",
+      "domain": "openai.com",
+      "published": "2026-03-02T15:30:00Z",
+      "author": "Sam Altman",
+      "tags": ["partnership", "defense", "safety"],
+      "language": "en"
+    },
+    {
+      "id": "techcrunch_20260303_002",
+      "url": "https://techcrunch.com/2026/03/02/openai-pentagon-deal-raises-questions",
+      "title": "OpenAI's Pentagon deal raises questions about AI oversight",
+      "summary": "Tech industry experts question the enforceability of OpenAI's stated safety principles in classified military deployments.",
+      "content": "Hours after Anthropic was banned from federal contracts, OpenAI announced a deal with the Pentagon...\n\n[Full article content]",
+      "source": "TechCrunch",
+      "domain": "techcrunch.com",
+      "published": "2026-03-02T18:45:00Z",
+      "author": "Sarah Chen",
+      "tags": ["openai", "pentagon", "ai-safety"],
+      "language": "en"
+    },
+    {
+      "id": "theverge_20260303_003",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/2026/3/2/anthropic-banned-openai-wins-pentagon",
+      "title": "How OpenAI caved to the Pentagon on AI surveillance",
+      "summary": "Analysis of the differences between OpenAI's and Anthropic's approaches to military AI contracts.",
+      "content": "The contrast between OpenAI and Anthropic's responses to Pentagon demands reveals a fundamental split...\n\n[Full article content]",
+      "source": "The Verge",
+      "domain": "theverge.com",
+      "published": "2026-03-02T20:15:00Z",
+      "author": "James Vincent",
+      "tags": ["openai", "anthropic", "military-ai"],
+      "language": "en"
+    },
+    {
+      "id": "mittr_20260303_004",
+      "url": "https://www.technologyreview.com/2026/03/02/ai-companies-military-contracts",
+      "title": "No one has a good plan for how AI companies should work with the government",
+      "summary": "The OpenAI-Anthropic split highlights the lack of industry consensus on military AI partnerships.",
+      "content": "The rapid escalation from negotiation to federal ban in the Anthropic case reveals...\n\n[Full article content]",
+      "source": "MIT Technology Review",
+      "domain": "technologyreview.com",
+      "published": "2026-03-02T16:20:00Z",
+      "author": "Will Douglas Heaven",
+      "tags": ["ai-policy", "military", "ethics"],
+      "language": "en"
+    },
+    {
+      "id": "hn_20260303_005",
+      "url": "https://www.theguardian.com/technology/2026/mar/02/london-anti-ai-protest",
+      "title": "Hundreds march in London demanding pause on frontier AI development",
+      "summary": "Largest anti-AI protest to date calls for citizen assemblies to govern AI deployment.",
+      "content": "Several hundred protesters marched through London's tech district on Saturday...\n\n[Full article content]",
+      "source": "The Guardian",
+      "domain": "theguardian.com",
+      "published": "2026-03-02T14:30:00Z",
+      "author": "Alex Hern",
+      "tags": ["protest", "ai-regulation", "london"],
+      "language": "en"
+    }
+  ]
+}

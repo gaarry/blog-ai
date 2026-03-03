@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Raw Sources Schema",
+  "description": "Schema for raw collected sources from various platforms",
+  "type": "object",
+  "required": ["metadata", "sources"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["collected_at", "time_range", "total_sources", "total_articles"],
+      "properties": {
+        "collected_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when collection completed"
+        },
+        "time_range": {
+          "type": "string",
+          "description": "Time range for collection (e.g., '24h', '48h')"
+        },
+        "total_sources": {
+          "type": "integer",
+          "description": "Number of sources queried"
+        },
+        "total_articles": {
+          "type": "integer",
+          "description": "Total articles collected"
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "url", "title", "source", "domain", "published", "content"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier (hash of URL)"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "Full URL of the article"
+          },
+          "title": {
+            "type": "string",
+            "description": "Article title"
+          },
+          "summary": {
+            "type": "string",
+            "description": "Article summary or excerpt"
+          },
+          "content": {
+            "type": "string",
+            "description": "Full article content (markdown or plain text)"
+          },
+          "source": {
+            "type": "string",
+            "description": "Source name (e.g., 'OpenAI Blog', 'TechCrunch')"
+          },
+          "domain": {
+            "type": "string",
+            "description": "Domain name (e.g., 'openai.com', 'techcrunch.com')"
+          },
+          "published": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Publication timestamp (ISO 8601)"
+          },
+          "author": {
+            "type": "string",
+            "description": "Article author (if available)"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Article tags or categories"
+          },
+          "language": {
+            "type": "string",
+            "default": "en",
+            "description": "Article language (ISO 639-1 code)"
+          }
+        }
+      }
+    }
+  }
+}

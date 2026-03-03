@@ -1,0 +1,242 @@
+{
+  "metadata": {
+    "scored_at": "2026-03-03T10:15:00+08:00",
+    "total_articles": 12,
+    "scoring_algorithm": {
+      "cross_verification": 0.40,
+      "community_engagement": 0.25,
+      "source_authority": 0.20,
+      "timeliness": 0.15
+    }
+  },
+  "sources": [
+    {
+      "id": "openai_blog_001",
+      "url": "https://openai.com/blog/gpt-5-announcement",
+      "title": "Introducing GPT-5: Our Most Capable Model Yet",
+      "summary": "OpenAI announces GPT-5 with improved reasoning, multimodal capabilities, and reduced hallucinations.",
+      "content": "Today we're announcing GPT-5, our most capable model to date...",
+      "source": "OpenAI Blog",
+      "domain": "openai.com",
+      "published": "2026-03-02T15:00:00Z",
+      "tags": ["model-release", "gpt-5", "reasoning"],
+      "score": 92.5,
+      "score_breakdown": {
+        "cross_verification": 38.0,
+        "community_engagement": 23.0,
+        "source_authority": 20.0,
+        "timeliness": 11.5
+      },
+      "related_articles": ["techcrunch_001", "mit_tr_001"]
+    },
+    {
+      "id": "anthropic_blog_001",
+      "url": "https://www.anthropic.com/news/claude-4-coding",
+      "title": "Claude 4 Sets New Benchmark in Code Generation",
+      "summary": "Anthropic's Claude 4 achieves 89% on SWE-bench, surpassing previous models.",
+      "content": "Claude 4 has achieved 89% on SWE-bench...",
+      "source": "Anthropic News",
+      "domain": "anthropic.com",
+      "published": "2026-03-02T14:30:00Z",
+      "tags": ["model-release", "claude-4", "coding"],
+      "score": 90.0,
+      "score_breakdown": {
+        "cross_verification": 36.0,
+        "community_engagement": 22.0,
+        "source_authority": 20.0,
+        "timeliness": 12.0
+      },
+      "related_articles": ["theverge_001"]
+    },
+    {
+      "id": "google_blog_001",
+      "url": "https://blog.google/technology/ai/gemini-2-ultra-launch/",
+      "title": "Gemini 2.0 Ultra: Multimodal AI at Scale",
+      "summary": "Google launches Gemini 2.0 Ultra with native multimodal capabilities.",
+      "content": "Gemini 2.0 Ultra represents Google's most advanced multimodal AI system...",
+      "source": "Google Blog",
+      "domain": "blog.google",
+      "published": "2026-03-01T18:00:00Z",
+      "tags": ["model-release", "gemini", "multimodal"],
+      "score": 85.0,
+      "score_breakdown": {
+        "cross_verification": 32.0,
+        "community_engagement": 20.0,
+        "source_authority": 20.0,
+        "timeliness": 13.0
+      },
+      "related_articles": ["mit_tr_001"]
+    },
+    {
+      "id": "meta_blog_001",
+      "url": "https://ai.meta.com/blog/llama-4-open-source/",
+      "title": "Llama 4: Our Most Capable Open Source Model",
+      "summary": "Meta releases Llama 4 with performance competitive with closed-source models.",
+      "content": "Llama 4 represents a major milestone in open source AI...",
+      "source": "Meta AI Blog",
+      "domain": "ai.meta.com",
+      "published": "2026-03-01T16:00:00Z",
+      "tags": ["open-source", "llama-4", "meta"],
+      "score": 82.0,
+      "score_breakdown": {
+        "cross_verification": 30.0,
+        "community_engagement": 21.0,
+        "source_authority": 18.0,
+        "timeliness": 13.0
+      },
+      "related_articles": []
+    },
+    {
+      "id": "techcrunch_001",
+      "url": "https://techcrunch.com/2026/03/02/openai-gpt5-launch",
+      "title": "OpenAI launches GPT-5 with focus on reasoning and safety",
+      "summary": "The new model includes enhanced safety features and improved performance.",
+      "content": "OpenAI's GPT-5 launch focuses on two key areas...",
+      "source": "TechCrunch",
+      "domain": "techcrunch.com",
+      "published": "2026-03-02T16:00:00Z",
+      "tags": ["openai", "gpt-5", "ai-safety"],
+      "score": 78.0,
+      "score_breakdown": {
+        "cross_verification": 32.0,
+        "community_engagement": 19.0,
+        "source_authority": 15.0,
+        "timeliness": 12.0
+      },
+      "related_articles": ["openai_blog_001"]
+    },
+    {
+      "id": "theverge_001",
+      "url": "https://www.theverge.com/ai/2026/3/2/anthropic-claude-4-coding",
+      "title": "Anthropic's Claude 4 can now write production-ready code",
+      "summary": "New benchmark results show Claude 4 outperforming competitors.",
+      "content": "Anthropic's latest model, Claude 4, has demonstrated remarkable capabilities...",
+      "source": "The Verge",
+      "domain": "theverge.com",
+      "published": "2026-03-02T15:30:00Z",
+      "tags": ["anthropic", "claude-4", "software-engineering"],
+      "score": 75.0,
+      "score_breakdown": {
+        "cross_verification": 30.0,
+        "community_engagement": 18.0,
+        "source_authority": 15.0,
+        "timeliness": 12.0
+      },
+      "related_articles": ["anthropic_blog_001"]
+    },
+    {
+      "id": "mit_tr_001",
+      "url": "https://www.technologyreview.com/2026/03/01/ai-reasoning-breakthrough/",
+      "title": "AI reasoning capabilities see unexpected breakthrough",
+      "summary": "Multiple labs report significant improvements in AI reasoning.",
+      "content": "Recent model releases from OpenAI, Anthropic, and Google all show unexpected improvements...",
+      "source": "MIT Technology Review",
+      "domain": "technologyreview.com",
+      "published": "2026-03-01T14:00:00Z",
+      "tags": ["reasoning", "research", "scaling-laws"],
+      "score": 72.0,
+      "score_breakdown": {
+        "cross_verification": 28.0,
+        "community_engagement": 17.0,
+        "source_authority": 16.0,
+        "timeliness": 11.0
+      },
+      "related_articles": ["openai_blog_001", "anthropic_blog_001", "google_blog_001"]
+    },
+    {
+      "id": "stability_blog_001",
+      "url": "https://stability.ai/news/stable-diffusion-4",
+      "title": "Stable Diffusion 4.0: Photorealistic Image Generation",
+      "summary": "Stability AI releases SD 4.0 with improved photorealism.",
+      "content": "Stable Diffusion 4.0 introduces major improvements...",
+      "source": "Stability AI Blog",
+      "domain": "stability.ai",
+      "published": "2026-03-02T11:00:00Z",
+      "tags": ["image-generation", "stable-diffusion", "generative-ai"],
+      "score": 68.0,
+      "score_breakdown": {
+        "cross_verification": 24.0,
+        "community_engagement": 18.0,
+        "source_authority": 16.0,
+        "timeliness": 10.0
+      },
+      "related_articles": []
+    },
+    {
+      "id": "hn_001",
+      "url": "https://news.ycombinator.com/item?id=39900001",
+      "title": "Show HN: Open-source AI agent framework with 10k GitHub stars",
+      "summary": "New AI agent framework gains rapid adoption.",
+      "content": "AgentFlow, a new open-source framework for building AI agents...",
+      "source": "Hacker News",
+      "domain": "news.ycombinator.com",
+      "published": "2026-03-02T08:00:00Z",
+      "tags": ["open-source", "agents", "tools"],
+      "score": 65.0,
+      "score_breakdown": {
+        "cross_verification": 20.0,
+        "community_engagement": 22.0,
+        "source_authority": 12.0,
+        "timeliness": 11.0
+      },
+      "related_articles": []
+    },
+    {
+      "id": "microsoft_blog_001",
+      "url": "https://blogs.microsoft.com/ai/copilot-enterprise-updates/",
+      "title": "Microsoft Copilot for Enterprise: New capabilities and pricing",
+      "summary": "Microsoft announces expanded Copilot capabilities.",
+      "content": "Microsoft is expanding Copilot for Enterprise...",
+      "source": "Microsoft AI Blog",
+      "domain": "blogs.microsoft.com",
+      "published": "2026-03-02T13:00:00Z",
+      "tags": ["enterprise", "copilot", "microsoft"],
+      "score": 62.0,
+      "score_breakdown": {
+        "cross_verification": 20.0,
+        "community_engagement": 16.0,
+        "source_authority": 16.0,
+        "timeliness": 10.0
+      },
+      "related_articles": []
+    },
+    {
+      "id": "eu_policy_001",
+      "url": "https://ec.europa.eu/ai-act-enforcement-2026",
+      "title": "EU AI Act enforcement begins with first compliance audits",
+      "summary": "European Union begins enforcing AI Act.",
+      "content": "The European Union has begun enforcing the AI Act...",
+      "source": "European Commission",
+      "domain": "ec.europa.eu",
+      "published": "2026-03-01T10:00:00Z",
+      "tags": ["regulation", "eu-ai-act", "policy"],
+      "score": 58.0,
+      "score_breakdown": {
+        "cross_verification": 18.0,
+        "community_engagement": 14.0,
+        "source_authority": 17.0,
+        "timeliness": 9.0
+      },
+      "related_articles": []
+    },
+    {
+      "id": "arxiv_001",
+      "url": "https://arxiv.org/abs/2603.00001",
+      "title": "Constitutional AI: Scalable Oversight for Large Language Models",
+      "summary": "New research proposes methods for training AI systems.",
+      "content": "We present Constitutional AI (CAI)...",
+      "source": "arXiv",
+      "domain": "arxiv.org",
+      "published": "2026-03-01T09:00:00Z",
+      "tags": ["research", "ai-safety", "alignment"],
+      "score": 55.0,
+      "score_breakdown": {
+        "cross_verification": 16.0,
+        "community_engagement": 13.0,
+        "source_authority": 18.0,
+        "timeliness": 8.0
+      },
+      "related_articles": []
+    }
+  ]
+}

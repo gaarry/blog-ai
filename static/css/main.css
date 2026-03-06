@@ -638,6 +638,19 @@ body {
     line-height: 1.5;
 }
 
+/* 参考网站样式：关键标签带引号 */
+.key-tag::before {
+    content: "「";
+    color: #6ba88a;
+    margin-right: 0.2em;
+}
+
+.key-tag::after {
+    content: "」";
+    color: #6ba88a;
+    margin-left: 0.2em;
+}
+
 .paper-tag {
     display: inline-block;
     font-family: "JetBrains Mono", "Courier New", monospace;

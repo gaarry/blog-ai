@@ -1,6 +1,5 @@
 {
-  "buildCommand": "hugo --destination public",
+  "buildCommand": "curl -Ls https://github.com/gohugoio/hugo/releases/download/v0.155.1/hugo_extended_0.155.1_linux-amd64.tar.gz -o hugo.tar.gz && tar -xzf hugo.tar.gz && ./hugo --destination public",
   "outputDirectory": "public",
-  "framework": null,
-  "installCommand": "npm install -g hugo"
+  "framework": null
 }

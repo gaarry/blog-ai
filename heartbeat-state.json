@@ -1,12 +1,12 @@
 {
-  "lastDigest": "2026-04-29",
-  "lastDigestUrl": "https://ai-blog.gary-yao.com/posts/openai%E7%89%B5%E6%89%8Baws%E8%8B%B9%E6%9E%9Cai%E4%BF%AE%E5%9B%BE%E6%9D%A5%E8%A2%AD%E9%A9%AC%E6%96%AF%E5%85%8B%E5%BA%AD%E4%B8%8A%E5%BC%80%E7%82%AE%E4%BB%8A%E6%97%A5ai%E5%9C%88%E4%B8%89%E5%A4%A7%E4%BA%8B%E4%BB%B6/",
-  "generatedAt": "2026-04-29T08:00:00+08:00",
+  "lastDigest": "2026-04-30",
+  "lastDigestUrl": "https://ai-blog.gary-yao.com/posts/google-400%E4%BA%BF%E7%BE%8E%E5%85%83%E6%8A%BC%E6%B3%A8anthropic%E4%BC%B0%E5%80%BC3500%E4%BA%BFopenai%E7%BB%93%E6%9D%9F%E5%BE%AE%E8%BD%AF%E7%8B%AC%E5%AE%B6%E5%8D%8F%E8%AE%AEai%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%86%B7%E6%88%98%E5%8D%87%E7%BA%A7/",
+  "generatedAt": "2026-04-30T08:00:00+08:00",
   "status": "success",
   "topStories": [
-    "OpenAI GPT-5.5 launches on AWS Bedrock (Microsoft exclusivity ended)",
-    "Apple iOS 27 Photos adds AI Extend/Enhance/Reframe tools",
-    "Musk v Altman trial day 2: Musk testifies OpenAI was meant to be nonprofit"
+    "Google commits up to $40B to Anthropic, valuation hits $350B with 10GW compute",
+    "OpenAI-Microsoft exclusivity deal ends, OpenAI now free to sell across AWS and Google Cloud",
+    "Claude Opus 4.7 and Claude Design launch as Anthropic expands product and compute stack simultaneously"
   ],
   "quickNewsCount": 8
 }

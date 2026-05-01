@@ -1,4 +1,5 @@
 ---
+slug: "musk-openai-trial-day3"
 title: "Musk出庭第三天：庭审实录直击OpenAI创办恩怨、Anthropic推代码安全扫描、OpenAI推高级账户保护"
 date: 2026-05-01T08:00:00+08:00
 draft: false

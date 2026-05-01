@@ -43,7 +43,7 @@ title = 'AI资讯速览'
   pagerSize = 10
 
 [permalinks]
-  posts = '/posts/:year/:month/:day/:slug/'
+  posts = '/posts/:slug/'
   photos = '/photos/:slug/'
 
 [outputs]

@@ -2,6 +2,7 @@
 title: "AI资讯简报｜2026年5月4日：OpenAI考虑分拆硬件部门冲击IPO；Greg Brockman称公司已接近AGI目标"
 date: 2026-05-04T08:00:00+08:00
 draft: false
+slug: "openai-spinout-hardware-ipo-brockman-agi"
 description: "OpenAI考虑Alphabet式结构分拆硬件部门；Greg Brockman法院证词称公司80%实现AGI；Google DeepMind发布Gemma 4开源模型"
 coverImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80"
 tags: ["AI资讯", "OpenAI", "Anthropic", "Google", "GPT"]

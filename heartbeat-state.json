@@ -1,13 +1,13 @@
 {
-  "lastDigest": "2026-05-01",
-  "lastDigestUrl": "https://ai-blog.gary-yao.com/posts/musk-openai-trial-day3/",
-  "generatedAt": "2026-05-01T08:00:00+08:00",
+  "lastDigest": "2026-05-04",
+  "lastDigestUrl": "https://ai-blog.gary-yao.com/posts/openai-spinout-hardware-ipo-brockman-agi/",
+  "generatedAt": "2026-05-04T08:00:00+08:00",
   "status": "success",
   "topStories": [
-    "Musk v. OpenAI庭审第三天：交叉盘问混乱收场，Musk承认未细读合同，法官吐槽太难对付",
-    "Anthropic推出Claude Security：基于Claude Opus 4.7的代码安全扫描工具",
-    "OpenAI推出Advanced Account Security：支持Passkey和物理安全钥匙"
+    "OpenAI被曝考虑Alphabet式分拆硬件部门，为IPO铺路",
+    "Greg Brockman法院证词称OpenAI已实现80%的AGI目标",
+    "Google DeepMind发布Gemma 4：号称最强大的开源模型"
   ],
   "quickNewsCount": 8,
-  "note": "Article published at ASCII slug /posts/musk-openai-trial-day3/ (Vercel had 404 with Chinese-character slug)"
+  "note": "Article published at ASCII slug /posts/openai-spinout-hardware-ipo-brockman-agi/"
 }

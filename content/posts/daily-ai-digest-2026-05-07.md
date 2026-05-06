@@ -4,6 +4,7 @@ date: 2026-05-07T08:00:00+08:00
 draft: false
 description: "Anthropic为Claude推出\"梦境\"自主改进功能；五角大楼与7家AI公司签署协议排除Anthropic；两大AI巨头同日与华尔街PE成立企业服务合资公司"
 coverImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80"
+slug: "daily-ai-digest-2026-05-07"
 tags: ["AI资讯", "Anthropic", "Pentagon", "OpenAI", "企业AI"]
 categories: ["AI资讯"]
 ---

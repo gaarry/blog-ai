@@ -1,4 +1,5 @@
 ---
+slug: "daily-ai-digest-2026-05-10"
 title: "OpenAI发布实时语音推理模型，xAI并入SpaceX变身SpaceXAI"
 date: 2026-05-10T08:00:00+08:00
 draft: false

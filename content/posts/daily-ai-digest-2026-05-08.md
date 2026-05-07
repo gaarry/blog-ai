@@ -1,4 +1,5 @@
 ---
+slug: "daily-ai-digest-2026-05-08"
 title: "AI资讯简报 | OpenAI开源超算网络协议、Anthropic牵手SpaceX、美国政府推AI模型预审制度"
 date: 2026-05-08T08:00:00+08:00
 draft: false

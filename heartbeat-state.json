@@ -1,13 +1,9 @@
 {
-  "lastDigest": "2026-05-08",
-  "lastDigestUrl": "https://ai-blog.gary-yao.com/posts/daily-ai-digest-2026-05-08/",
-  "generatedAt": "2026-05-07T08:00:00+08:00",
-  "status": "success",
-  "topStories": [
-    "OpenAI联合AMD、NVIDIA等五大厂商开源MRC超算网络协议，可连接超过13万GPU",
-    "Anthropic与SpaceX（xAI）达成计算合作，获得Colossus 1全部算力",
-    "美国政府建立AI模型预发布审查制度，Google、Microsoft、xAI率先签署协议"
-  ],
-  "quickNewsCount": 8,
-  "note": "Slug: daily-ai-digest-2026-08, URL verified 200"
+  "lastDigestDate": "2026-05-09",
+  "lastDigestSlug": "daily-ai-digest-2026-05-09",
+  "lastDigestUrl": "https://ai-blog.gary-yao.com/posts/daily-ai-digest-2026-05-09/",
+  "lastDigestTitle": "AI资讯简报｜2026年5月9日：GPT-5.5全面开放，SpaceX算力租给Anthropic，马斯克庭审继续",
+  "deployedAt": "2026-05-09T07:05:00+08:00",
+  "gitCommit": "4dff2bb",
+  "vercelDeployment": "https://blog-4fhhlrxfb-garys-projects-f0595d08.vercel.app"
 }

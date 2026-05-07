@@ -1,7 +1,7 @@
 ---
 slug: "daily-ai-digest-2026-05-08"
 title: "AI资讯简报 | OpenAI开源超算网络协议、Anthropic牵手SpaceX、美国政府推AI模型预审制度"
-date: 2026-05-08T08:00:00+08:00
+date: 2026-05-07T08:00:00+08:00
 draft: false
 description: "OpenAI联合多家巨头开源MRC超算网络协议；Anthropic与SpaceX达成计算合作；美国政府建立AI模型发布前审查制度。"
 coverImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80"

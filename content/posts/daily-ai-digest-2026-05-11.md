@@ -1,4 +1,5 @@
 ---
+slug: "daily-ai-digest-2026-05-11"
 title: "Meta员工陷入焦虑：被追踪活动训练AI，万人裁员将至"
 date: 2026-05-11T08:00:00+08:00
 draft: false

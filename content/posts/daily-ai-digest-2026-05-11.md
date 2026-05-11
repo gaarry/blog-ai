@@ -2,7 +2,7 @@
 title: "Meta员工陷入焦虑：被追踪活动训练AI，万人裁员将至"
 date: 2026-05-11T08:00:00+08:00
 draft: false
-description: "Meta正在经历一场内部危机：追踪员工电脑活动训练AI、大规模裁员在即、疯狂推动AI agents，员工称"看不到长期职业前景""
+description: "Meta正在经历一场内部危机：追踪员工电脑活动训练AI、大规模裁员在即、疯狂推动AI agents，员工称见不到长期职业前景"
 coverImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80"
 tags: ["AI", "Meta", "Layoffs", " Workplace"]
 categories: ["AI资讯"]

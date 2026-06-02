@@ -1,26 +1,22 @@
 {{ define "main" }}
-<article class="post-article">
-  <header class="post-header">
-    <p class="post-meta">
-      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年1月2日" }}</time>
-    </p>
-    <h1>{{ .Title }}</h1>
+<header>
+  <p class="article-meta">
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年1月2日" }}</time>
+  </p>
+  <h1>{{ .Title }}</h1>
 
-    {{ if .Params.description }}
-    <div class="section-overview">
-      <ul>
-        {{ range $i, $line := (split .Params.description "；") }}
-        {{ if $line }}<li>{{ $line | strings.TrimSuffix "；" }}</li>{{ end }}
-        {{ end }}
-      </ul>
-    </div>
+  {{ if .Params.description }}
+  <ul class="section-overview">
+    {{ range $i, $line := (split .Params.description "；") }}
+    {{ if $line }}<li>{{ $line | strings.TrimSuffix "；" }}</li>{{ end }}
     {{ end }}
-  </header>
+  </ul>
+  {{ end }}
+</header>
 
-  <main class="post-body">
-    {{ .Content }}
-  </main>
-</article>
+<main>
+  {{ .Content }}
+</main>
 
 {{ if or .PrevInSection .NextInSection }}
 <div class="share-bar">

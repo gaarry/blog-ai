@@ -4,6 +4,14 @@
   <p class="page-tagline">{{ .Site.Params.tagline | default "不炸裂，不夸张，不接商单" }}</p>
 </div>
 
+<div class="site-intro">
+  <span>每日 AI 资讯精选</span>
+  <span class="dot"></span>
+  <span>英文一手信源</span>
+  <span class="dot"></span>
+  <a href="/index.xml">RSS 订阅</a>
+</div>
+
 <ul class="article-list">
   {{ range (.Paginator 10).Pages }}
   {{ if eq .Section "posts" }}

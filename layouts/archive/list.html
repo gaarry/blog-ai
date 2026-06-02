@@ -1,32 +1,25 @@
 {{ define "main" }}
-<div class="container">
-  <article class="page-content">
-    <header class="page-header">
-      <h1 class="page-title">{{ .Title }}</h1>
-    </header>
-    
-    {{ $posts := where .Site.RegularPages "Section" "posts" }}
-    {{ $wordCount := 0 }}
-    {{ range $posts }}
-      {{ $wordCount = add $wordCount .WordCount }}
-    {{ end }}
-    
-    <div class="archive-stats">
-      <span class="archive-count">{{ len $posts }} posts</span>
-      {{ if gt $wordCount 0 }}
-      <span class="archive-words">({{ div $wordCount 1000 }}K words) have been published on {{ $.Site.Title }}.</span>
-      {{ end }}
-    </div>
-    
-    <div class="archive-list">
-      {{ range $posts.ByDate.Reverse }}
-      <div class="archive-item">
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-        <span>-</span>
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
-      </div>
-      {{ end }}
-    </div>
-  </article>
+<div class="page-header">
+  <h1 class="page-subtitle">{{ .Title }}</h1>
+</div>
+
+{{ $posts := where .Site.RegularPages "Section" "posts" }}
+{{ $wordCount := 0 }}
+{{ range $posts }}
+  {{ $wordCount = add $wordCount .WordCount }}
+{{ end }}
+
+<div class="archive-stats">
+  <span class="archive-count">{{ len $posts }}</span> 篇文章
+  <span class="archive-words">· 共约 {{ div $wordCount 1000 }}K 字</span>
+</div>
+
+<div class="archive-list">
+  {{ range $posts.ByDate.Reverse }}
+  <div class="archive-item">
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年1月2日" }}</time>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+  </div>
+  {{ end }}
 </div>
 {{ end }}

@@ -1,25 +1,19 @@
 {{ define "main" }}
-<div class="container">
-  <article class="page-content">
-    <header class="page-header">
-      <h1 class="page-title">{{ .Title }}</h1>
-    </header>
-    
-    <div class="page-body">
-      <p class="photos-intro">{{ .Content }}</p>
-      
-      <div class="photos-grid">
-        {{ range (where .Site.RegularPages "Section" "photos").ByDate.Reverse }}
-        <a href="{{ .Permalink }}" class="photo-item">
-          {{ if .Params.coverImage }}
-          <img src="{{ .Params.coverImage }}" alt="{{ .Title }}" loading="lazy">
-          {{ else }}
-          <div class="photo-placeholder">{{ .Title }}</div>
-          {{ end }}
-        </a>
-        {{ end }}
-      </div>
-    </div>
-  </article>
+<div class="page-header">
+  <h1 class="page-subtitle">{{ .Title }}</h1>
+</div>
+
+<div class="photos-intro">{{ .Content }}</div>
+
+<div class="photos-grid">
+  {{ range (where .Site.RegularPages "Section" "photos").ByDate.Reverse }}
+  <a href="{{ .Permalink }}" class="photo-item">
+    {{ if .Params.coverImage }}
+    <img src="{{ .Params.coverImage }}" alt="{{ .Title }}" loading="lazy">
+    {{ else }}
+    <div class="photo-placeholder">{{ .Title }}</div>
+    {{ end }}
+  </a>
+  {{ end }}
 </div>
 {{ end }}

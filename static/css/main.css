@@ -860,6 +860,107 @@ main figure figcaption {
     margin-bottom: 1.5rem;
 }
 
+/* ── 照片墙 ────────────────────────── */
+.photos-intro {
+    font-size: 0.95rem;
+    color: #888;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.photos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    margin: 0 0 2rem;
+}
+
+.photo-item {
+    display: block;
+    overflow: hidden;
+    border-radius: 4px;
+    background: #f0f0f0;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    aspect-ratio: 4 / 3;
+}
+
+.photo-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3f4f6;
+    color: #bbb;
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* ── 单张照片页面 ──────────────────── */
+.post-content {
+    margin-top: 0;
+}
+
+.post-cover {
+    margin: 1.5rem 0;
+}
+
+.post-cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    margin: 1.5rem 0;
+}
+
+.photo-figure {
+    margin: 0;
+}
+
+.photo-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+/* ── EXIF 信息 ─────────────────────── */
+.exif-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem 0.8rem;
+    margin: 0.6rem 0 0.2rem;
+    font-size: 0.78rem;
+    color: #999;
+}
+
+.exif-item strong {
+    color: #bbb;
+    font-weight: 600;
+    margin-right: 0.2rem;
+}
+
 /* ── 订阅框 ───────────────────────── */
 .subscribe-box {
     background: #ffffff;
@@ -1117,6 +1218,15 @@ main figure figcaption {
 
     /* Footer */
     .footer-links { font-size: 0.85rem; }
+
+    /* Photos */
+    .photos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+    .photo-gallery {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 480px) {

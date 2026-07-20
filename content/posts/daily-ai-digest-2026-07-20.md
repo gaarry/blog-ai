@@ -2,6 +2,7 @@
 title: "Netflix收购Ben Affleck AI公司；Meta与Anthropic百亿美元合作谈判；苹果谷歌下架AI「脱衣」应用"
 date: 2026-07-20T08:00:00+08:00
 draft: false
+slug: "daily-ai-digest-2026-07-20"
 description: "每日AI资讯：Netflix收购Affleck AI初创公司，Meta与Anthropic洽谈百亿美元算力合作，美国多地立法打击AI脱衣应用"
 coverImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80"
 tags: ["AI", "Meta", "Anthropic", "Apple", "Netflix"]

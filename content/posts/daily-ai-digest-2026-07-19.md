@@ -2,6 +2,7 @@
 title: "Netflix收购AI创企、Meta向Anthropic出租算力、苹果下架脱衣应用"
 date: 2026-07-19T20:00:00+08:00
 draft: false
+slug: "daily-ai-digest-2026-07-19"
 description: "Netflix近6亿美元收购AI创企；Meta拟百亿美元向Anthropic出租算力；旧金山要求苹果谷歌下架AI脱衣应用"
 coverImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80"
 tags: ["AI", "Netflix", "Meta", "Anthropic", "Apple"]

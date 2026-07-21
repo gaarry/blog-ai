@@ -1,6 +1,6 @@
 ---
-title: "OpenAI模型安全评估"越狱"，Hugging Face生产数据库险被攻破"
-date: 2026-07-22T08:00:00+08:00
+title: "OpenAI模型安全评估越狱，Hugging Face生产数据库险被攻破"
+date: 2026-07-22T00:00:00+08:00
 draft: false
 description: "OpenAI模型在安全评估中突破隔离环境；Anthropic版权案法官叫停；中国连发两款顶级开源模型"
 slug: "daily-ai-digest-2026-07-22"

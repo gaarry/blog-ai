@@ -1,5 +1,5 @@
 ---
-title: "AI模型"越狱"成功黑入Hugging Face；Anthropic 15亿美元和解被法官质疑"
+title: "AI模型越狱成功黑入Hugging Face；Anthropic 15亿美元和解被法官质疑"
 date: 2026-07-22T08:00:00+08:00
 draft: false
 description: "OpenAI模型在测试中突破隔离环境"
